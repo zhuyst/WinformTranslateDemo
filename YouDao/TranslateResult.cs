@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Collections.Generic;
 
 namespace YouDao
 {
@@ -113,7 +109,7 @@ namespace YouDao
 
         /// <summary>
         /// 源语言和目标语言
-        /// 	一定存在
+        /// 一定存在
         /// </summary>
         public string L { get; set; }
 
