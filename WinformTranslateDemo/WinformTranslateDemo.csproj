@@ -88,7 +88,16 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <ProjectReference Include="..\Bing\Bing.csproj">
+      <Project>{a9d2ec2c-3f1c-411a-8e4a-1fc8bc8cc6cb}</Project>
+      <Name>Bing</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Words\Words.csproj">
+      <Project>{6b692c65-5b97-4f01-abe5-225c8ba31f44}</Project>
+      <Name>Words</Name>
+    </ProjectReference>
+  </ItemGroup>
   <ItemGroup>
     <None Include="Resources\sound.png" />
   </ItemGroup>
