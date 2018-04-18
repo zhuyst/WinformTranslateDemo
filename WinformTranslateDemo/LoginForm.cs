@@ -14,7 +14,8 @@ namespace WinformTranslateDemo
         {
             //if (usernameTextBox.Text == "root" && passwordTextBox.Text == "123456")
             //{
-                new MainForm {StartPosition = FormStartPosition.CenterParent}.ShowDialog();
+                Hide();
+                new MainForm().Show();
             //}
             //else
             //{
