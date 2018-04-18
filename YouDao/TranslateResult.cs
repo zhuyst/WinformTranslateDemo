@@ -113,7 +113,7 @@ namespace YouDao
 
         /// <summary>
         /// 源语言和目标语言
-        /// 	一定存在
+        /// 一定存在
         /// </summary>
         public string L { get; set; }
 
