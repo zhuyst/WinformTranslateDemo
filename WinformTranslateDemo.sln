@@ -9,6 +9,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "YouDao", "YouDao\YouDao.csp
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Bing", "Bing\Bing.csproj", "{A9D2EC2C-3F1C-411A-8E4A-1FC8BC8CC6CB}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Words", "Words\Words.csproj", "{6B692C65-5B97-4F01-ABE5-225C8BA31F44}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +29,10 @@ Global
 		{A9D2EC2C-3F1C-411A-8E4A-1FC8BC8CC6CB}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A9D2EC2C-3F1C-411A-8E4A-1FC8BC8CC6CB}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A9D2EC2C-3F1C-411A-8E4A-1FC8BC8CC6CB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6B692C65-5B97-4F01-ABE5-225C8BA31F44}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6B692C65-5B97-4F01-ABE5-225C8BA31F44}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6B692C65-5B97-4F01-ABE5-225C8BA31F44}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6B692C65-5B97-4F01-ABE5-225C8BA31F44}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
