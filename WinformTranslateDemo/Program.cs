@@ -13,7 +13,7 @@ namespace WinformTranslateDemo
         /// </summary>
         [STAThread]
         static void Main()
-        {
+        {   Console.WriteLine("git");
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new Form1());
