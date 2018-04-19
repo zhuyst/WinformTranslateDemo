@@ -22,7 +22,7 @@ namespace Words.Properties {
     [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "15.0.0.0")]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
-    internal class Resources {
+    public class Resources {
         
         private static global::System.Resources.ResourceManager resourceMan;
         
@@ -36,7 +36,7 @@ namespace Words.Properties {
         ///   返回此类使用的缓存的 ResourceManager 实例。
         /// </summary>
         [global::System.ComponentModel.EditorBrowsableAttribute(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        internal static global::System.Resources.ResourceManager ResourceManager {
+        public static global::System.Resources.ResourceManager ResourceManager {
             get {
                 if (object.ReferenceEquals(resourceMan, null)) {
                     global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("Words.Properties.Resources", typeof(Resources).Assembly);
@@ -51,7 +51,7 @@ namespace Words.Properties {
         ///   重写当前线程的 CurrentUICulture 属性。
         /// </summary>
         [global::System.ComponentModel.EditorBrowsableAttribute(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        internal static global::System.Globalization.CultureInfo Culture {
+        public static global::System.Globalization.CultureInfo Culture {
             get {
                 return resourceCulture;
             }
@@ -63,7 +63,7 @@ namespace Words.Properties {
         /// <summary>
         ///   查找类似 accord,accordance,accordingly,account,accumulate,accuracy,accurate,accuse,accustom,accustomed,achieve,achievement,acid,acquaintance,acquire,acre,act,action,active,activity,actress,actually,acute,adapt,add,addition,additional,address,adequate,adjective,adjust,administration,admire,admission,admit,adopt,advance,advanced,advantage,adventure,adverb,advertisement,advisable,advise,aeroplane,affair,affect,affection,afford,African,agency,agent,aggressive,agony,agreement,agriculture,aid,aircraft,airline,airplane,air [字符串的其余部分被截断]&quot;; 的本地化字符串。
         /// </summary>
-        internal static string words {
+        public static string words {
             get {
                 return ResourceManager.GetString("words", resourceCulture);
             }
