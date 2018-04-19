@@ -11,6 +11,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Bing", "Bing\Bing.csproj", 
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Words", "Words\Words.csproj", "{6B692C65-5B97-4F01-ABE5-225C8BA31F44}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WindowsFormsControlLibrary", "WindowsFormsControlLibrary\WindowsFormsControlLibrary.csproj", "{00E50067-AAB0-4047-BDBB-2D6E6506BD64}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -33,6 +35,10 @@ Global
 		{6B692C65-5B97-4F01-ABE5-225C8BA31F44}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{6B692C65-5B97-4F01-ABE5-225C8BA31F44}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{6B692C65-5B97-4F01-ABE5-225C8BA31F44}.Release|Any CPU.Build.0 = Release|Any CPU
+		{00E50067-AAB0-4047-BDBB-2D6E6506BD64}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{00E50067-AAB0-4047-BDBB-2D6E6506BD64}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{00E50067-AAB0-4047-BDBB-2D6E6506BD64}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{00E50067-AAB0-4047-BDBB-2D6E6506BD64}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

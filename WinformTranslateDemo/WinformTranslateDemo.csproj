@@ -88,7 +88,12 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <ProjectReference Include="..\WindowsFormsControlLibrary\WindowsFormsControlLibrary.csproj">
+      <Project>{00e50067-aab0-4047-bdbb-2d6e6506bd64}</Project>
+      <Name>WindowsFormsControlLibrary</Name>
+    </ProjectReference>
+  </ItemGroup>
   <ItemGroup>
     <None Include="Resources\sound.png" />
   </ItemGroup>
