@@ -1,4 +1,5 @@
-﻿using RestSharp;
+﻿using System.Collections.Generic;
+using RestSharp;
 
 namespace Bing
 {
@@ -8,9 +9,15 @@ namespace Bing
 
         private readonly RestClient _client;
 
+        /// <summary>
+        /// 翻译结果缓存
+        /// </summary>
+        private readonly Dictionary<string, TranslateResult> _cacheResults;
+
         public TranslateApi()
         {
             _client = new RestClient(ApiUrl);
+            _cacheResults = new Dictionary<string, TranslateResult>();
         }
 
         /// <summary>
@@ -20,10 +27,23 @@ namespace Bing
         /// <returns>翻译结果</returns>
         public TranslateResult EnToZh(string word)
         {
+            word = word.Trim();
+
+            // 直接返回已查询过的翻译结果
+            if (_cacheResults.ContainsKey(word))
+            {
+                return _cacheResults[word];
+            }
+
             var request = new RestRequest();
             request.AddQueryParameter("Word", word);
             var response = _client.Get<TranslateResult>(request);
-            return response.Data;
+            var result = response.Data;
+
+            // 将结果存入缓存
+            _cacheResults.Add(word,result);
+
+            return result;
         }
     }
 }
