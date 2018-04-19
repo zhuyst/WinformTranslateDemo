@@ -47,7 +47,7 @@
             this.ex1 = new WindowsFormsControlLibrary.MyLabel();
             this.ex1Sound = new System.Windows.Forms.PictureBox();
             this.ex2 = new WindowsFormsControlLibrary.MyLabel();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.ex2Sound = new System.Windows.Forms.PictureBox();
             groupBox1 = new System.Windows.Forms.GroupBox();
             groupBox2 = new System.Windows.Forms.GroupBox();
             flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
@@ -65,7 +65,7 @@
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ex1Sound)).BeginInit();
             panel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ex2Sound)).BeginInit();
             this.SuspendLayout();
             // 
             // groupBox1
@@ -93,7 +93,7 @@
             this.wordListBox.Name = "wordListBox";
             this.wordListBox.Size = new System.Drawing.Size(284, 559);
             this.wordListBox.TabIndex = 0;
-            this.wordListBox.SelectedIndexChanged += new System.EventHandler(this.wordListView_SelectedIndexChanged);
+            this.wordListBox.SelectedIndexChanged += new System.EventHandler(this.wordListBox_SelectedIndexChanged);
             // 
             // groupBox2
             // 
@@ -129,7 +129,7 @@
             flowLayoutPanel1.Location = new System.Drawing.Point(6, 24);
             flowLayoutPanel1.Margin = new System.Windows.Forms.Padding(2);
             flowLayoutPanel1.Name = "flowLayoutPanel1";
-            flowLayoutPanel1.Padding = new System.Windows.Forms.Padding(15, 15, 15, 15);
+            flowLayoutPanel1.Padding = new System.Windows.Forms.Padding(15);
             flowLayoutPanel1.Size = new System.Drawing.Size(813, 561);
             flowLayoutPanel1.TabIndex = 3;
             flowLayoutPanel1.WrapContents = false;
@@ -149,9 +149,9 @@
             this.word.AutoSize = true;
             this.word.Font = new System.Drawing.Font("宋体", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.word.Location = new System.Drawing.Point(5, 5);
-            this.word.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.word.Margin = new System.Windows.Forms.Padding(5);
             this.word.Name = "word";
-            this.word.Padding = new System.Windows.Forms.Padding(8, 8, 8, 8);
+            this.word.Padding = new System.Windows.Forms.Padding(8);
             this.word.Size = new System.Drawing.Size(80, 41);
             this.word.TabIndex = 0;
             this.word.Text = "单词";
@@ -164,13 +164,12 @@
             this.sound.Location = new System.Drawing.Point(90, 5);
             this.sound.Margin = new System.Windows.Forms.Padding(0, 5, 5, 5);
             this.sound.Name = "sound";
-            this.sound.Padding = new System.Windows.Forms.Padding(8, 8, 8, 8);
+            this.sound.Padding = new System.Windows.Forms.Padding(8);
             this.sound.Size = new System.Drawing.Size(35, 41);
             this.sound.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.sound.TabIndex = 7;
             this.sound.TabStop = false;
-            this.sound.MouseClick += new System.Windows.Forms.MouseEventHandler(this.sound_MouseDown);
-            this.sound.MouseDown += new System.Windows.Forms.MouseEventHandler(this.sound_MouseDown);
+            this.sound.MouseClick += new System.Windows.Forms.MouseEventHandler(this.sound_MouseClick);
             // 
             // flowLayoutPanel2
             // 
@@ -208,9 +207,9 @@
             // 
             this.meansList.AutoSize = true;
             this.meansList.Location = new System.Drawing.Point(20, 122);
-            this.meansList.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.meansList.Margin = new System.Windows.Forms.Padding(5);
             this.meansList.Name = "meansList";
-            this.meansList.Padding = new System.Windows.Forms.Padding(8, 8, 8, 8);
+            this.meansList.Padding = new System.Windows.Forms.Padding(8);
             this.meansList.Size = new System.Drawing.Size(83, 31);
             this.meansList.TabIndex = 5;
             this.meansList.Text = "词义分析";
@@ -222,7 +221,7 @@
             label6.Location = new System.Drawing.Point(20, 178);
             label6.Margin = new System.Windows.Forms.Padding(5, 20, 5, 5);
             label6.Name = "label6";
-            label6.Padding = new System.Windows.Forms.Padding(8, 8, 8, 8);
+            label6.Padding = new System.Windows.Forms.Padding(8);
             label6.Size = new System.Drawing.Size(55, 31);
             label6.TabIndex = 3;
             label6.Text = "例句";
@@ -255,9 +254,9 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.ex1.BackColor = System.Drawing.SystemColors.Window;
             this.ex1.Location = new System.Drawing.Point(42, 5);
-            this.ex1.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.ex1.Margin = new System.Windows.Forms.Padding(5);
             this.ex1.Name = "ex1";
-            this.ex1.Padding = new System.Windows.Forms.Padding(8, 8, 8, 8);
+            this.ex1.Padding = new System.Windows.Forms.Padding(8);
             this.ex1.Size = new System.Drawing.Size(725, 132);
             this.ex1.TabIndex = 6;
             this.ex1.Text = "例句1";
@@ -279,7 +278,7 @@
             // 
             panel2.AutoScroll = true;
             panel2.Controls.Add(this.ex2);
-            panel2.Controls.Add(this.pictureBox1);
+            panel2.Controls.Add(this.ex2Sound);
             panel2.Location = new System.Drawing.Point(17, 364);
             panel2.Margin = new System.Windows.Forms.Padding(2);
             panel2.Name = "panel2";
@@ -292,25 +291,25 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.ex2.Location = new System.Drawing.Point(42, 5);
-            this.ex2.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.ex2.Margin = new System.Windows.Forms.Padding(5);
             this.ex2.Name = "ex2";
-            this.ex2.Padding = new System.Windows.Forms.Padding(8, 8, 8, 8);
+            this.ex2.Padding = new System.Windows.Forms.Padding(8);
             this.ex2.Size = new System.Drawing.Size(725, 140);
             this.ex2.TabIndex = 6;
             this.ex2.Text = "例句2";
             // 
-            // pictureBox1
+            // ex2Sound
             // 
-            this.pictureBox1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pictureBox1.Image = global::WinformTranslateDemo.Properties.Resources.sound;
-            this.pictureBox1.Location = new System.Drawing.Point(5, 2);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(29, 32);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 5;
-            this.pictureBox1.TabStop = false;
-            this.pictureBox1.MouseClick += new System.Windows.Forms.MouseEventHandler(this.pictureBox1_MouseClick);
+            this.ex2Sound.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.ex2Sound.Image = global::WinformTranslateDemo.Properties.Resources.sound;
+            this.ex2Sound.Location = new System.Drawing.Point(5, 2);
+            this.ex2Sound.Margin = new System.Windows.Forms.Padding(2);
+            this.ex2Sound.Name = "ex2Sound";
+            this.ex2Sound.Size = new System.Drawing.Size(29, 32);
+            this.ex2Sound.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.ex2Sound.TabIndex = 5;
+            this.ex2Sound.TabStop = false;
+            this.ex2Sound.MouseClick += new System.Windows.Forms.MouseEventHandler(this.ex2Sound_MouseClick);
             // 
             // label1
             // 
@@ -352,7 +351,7 @@
             this.panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.ex1Sound)).EndInit();
             panel2.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ex2Sound)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -367,7 +366,7 @@
         private System.Windows.Forms.Label pho2;
         private System.Windows.Forms.PictureBox sound;
         private WindowsFormsControlLibrary.MyLabel ex2;
-        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.PictureBox ex2Sound;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel4;
         private System.Windows.Forms.ListBox wordListBox;

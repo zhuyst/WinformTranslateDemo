@@ -7,8 +7,9 @@ namespace WinformTranslateDemo
 {
     public partial class MainForm : Form
     {
-        private TranslateApi translate;
-        private TranslateResult result;
+        private TranslateApi _translate;
+        private TranslateResult _result;
+
         public MainForm()
         {
             InitializeComponent();
@@ -23,9 +24,33 @@ namespace WinformTranslateDemo
                 wordListBox.Items.Add(item);
             }
             wordListBox.EndUpdate();
-            translate = new TranslateApi();
+            _translate = new TranslateApi();
             wordListBox.SelectedIndex = 0;
+        }
 
+        /// <summary>
+        /// 选中单词列表中的单词时触发，更新翻译结果
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void wordListBox_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            var text = wordListBox.SelectedItem.ToString();
+            _result = _translate.EnToZh(text);
+            word.Text = text;
+            pho1.Text = $"美 [{_result.Pronunciation.AmE}]";
+            pho2.Text = $"英 [{_result.Pronunciation.BrE}]";
+            meansList.Clear();
+            foreach (var item in _result.Defs)
+            {
+                meansList.Add($"{item.Pos} { item.Def }");
+            }
+            ex1.Clear();
+            ex1.Add(_result.Sams[0].Eng);
+            ex1.Add(_result.Sams[0].Chn);
+            ex2.Clear();
+            ex2.Add(_result.Sams[1].Eng);
+            ex2.Add(_result.Sams[1].Chn);
         }
 
         /// <summary>
@@ -38,50 +63,42 @@ namespace WinformTranslateDemo
             Environment.Exit(0);
         }
 
-        private void sound_MouseDown(object sender, MouseEventArgs e)
+        /// <summary>
+        /// 朗读单词
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void sound_MouseClick(object sender, MouseEventArgs e)
         {
-            SpeechVoiceSpeakFlags flag = SpeechVoiceSpeakFlags.SVSFlagsAsync;
-            SpVoice voice = new SpVoice();
-            voice.Voice = voice.GetVoices(string.Empty, string.Empty).Item(0);
-            voice.Speak(word.Text, flag);
-
-
+            SpeechVoice(word.Text);
         }
 
-        private void wordListView_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            var text = wordListBox.SelectedItem.ToString();
-            result = translate.EnToZh(text);
-            word.Text = text;
-            pho1.Text = $"美 [{result.Pronunciation.AmE}]";
-            pho2.Text = $"英 [{result.Pronunciation.BrE}]";
-            meansList.Clear();
-            foreach (var item in result.Defs)
-            {
-                meansList.Add($"{item.Pos} { item.Def }");
-            }
-            ex1.Clear();
-            ex1.Add(result.Sams[0].Eng);
-            ex1.Add(result.Sams[0].Chn);
-            ex2.Clear();
-            ex2.Add(result.Sams[1].Eng);
-            ex2.Add(result.Sams[1].Chn);
-        }
-
+        /// <summary>
+        /// 朗读例句1
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void ex1Sound_MouseClick(object sender, MouseEventArgs e)
         {
-            SpeechVoiceSpeakFlags flag = SpeechVoiceSpeakFlags.SVSFlagsAsync;
-            SpVoice voice = new SpVoice();
-            voice.Voice = voice.GetVoices(string.Empty, string.Empty).Item(0);
-            voice.Speak(result.Sams[0].Eng, flag);
+            SpeechVoice(_result.Sams[0].Eng);
         }
 
-        private void pictureBox1_MouseClick(object sender, MouseEventArgs e)
+        /// <summary>
+        /// 朗读例句2
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void ex2Sound_MouseClick(object sender, MouseEventArgs e)
         {
-            SpeechVoiceSpeakFlags flag = SpeechVoiceSpeakFlags.SVSFlagsAsync;
-            SpVoice voice = new SpVoice();
+            SpeechVoice(_result.Sams[1].Eng);
+        }
+
+        private void SpeechVoice(string text)
+        {
+            var flag = SpeechVoiceSpeakFlags.SVSFlagsAsync;
+            var voice = new SpVoice();
             voice.Voice = voice.GetVoices(string.Empty, string.Empty).Item(0);
-            voice.Speak(result.Sams[1].Eng, flag);
+            voice.Speak(text, flag);
         }
     }
 }
