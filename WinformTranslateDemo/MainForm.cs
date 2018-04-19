@@ -24,11 +24,10 @@ namespace WinformTranslateDemo
 
         private void MainForm_Load(object sender, EventArgs e)
         {
-
+            List<string> vs = Words.Words.GetWords();
             for (int i = 0; i < 10; i++)   //添加10行数据
-            {
+            {   
                 ListViewItem lvi = new ListViewItem("12343");
-
                 wordListView.Items.Add(lvi);
             }
         }
