@@ -89,7 +89,7 @@
             this.wordListBox.FormattingEnabled = true;
             this.wordListBox.ItemHeight = 12;
             this.wordListBox.Location = new System.Drawing.Point(5, 19);
-            this.wordListBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.wordListBox.Margin = new System.Windows.Forms.Padding(2);
             this.wordListBox.Name = "wordListBox";
             this.wordListBox.Size = new System.Drawing.Size(228, 448);
             this.wordListBox.TabIndex = 0;
@@ -129,7 +129,7 @@
             flowLayoutPanel1.Location = new System.Drawing.Point(5, 19);
             flowLayoutPanel1.Margin = new System.Windows.Forms.Padding(2);
             flowLayoutPanel1.Name = "flowLayoutPanel1";
-            flowLayoutPanel1.Padding = new System.Windows.Forms.Padding(12, 12, 12, 12);
+            flowLayoutPanel1.Padding = new System.Windows.Forms.Padding(12);
             flowLayoutPanel1.Size = new System.Drawing.Size(651, 449);
             flowLayoutPanel1.TabIndex = 3;
             flowLayoutPanel1.WrapContents = false;
@@ -149,9 +149,9 @@
             this.word.AutoSize = true;
             this.word.Font = new System.Drawing.Font("宋体", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.word.Location = new System.Drawing.Point(4, 4);
-            this.word.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.word.Margin = new System.Windows.Forms.Padding(4);
             this.word.Name = "word";
-            this.word.Padding = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.word.Padding = new System.Windows.Forms.Padding(6);
             this.word.Size = new System.Drawing.Size(63, 32);
             this.word.TabIndex = 0;
             this.word.Text = "单词";
@@ -164,13 +164,12 @@
             this.sound.Location = new System.Drawing.Point(71, 4);
             this.sound.Margin = new System.Windows.Forms.Padding(0, 4, 4, 4);
             this.sound.Name = "sound";
-            this.sound.Padding = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.sound.Padding = new System.Windows.Forms.Padding(6);
             this.sound.Size = new System.Drawing.Size(28, 33);
             this.sound.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.sound.TabIndex = 7;
             this.sound.TabStop = false;
             this.sound.MouseClick += new System.Windows.Forms.MouseEventHandler(this.sound_MouseDown);
-            this.sound.MouseDown += new System.Windows.Forms.MouseEventHandler(this.sound_MouseDown);
             // 
             // flowLayoutPanel2
             // 
@@ -208,9 +207,9 @@
             // 
             this.meansList.AutoSize = true;
             this.meansList.Location = new System.Drawing.Point(16, 100);
-            this.meansList.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.meansList.Margin = new System.Windows.Forms.Padding(4);
             this.meansList.Name = "meansList";
-            this.meansList.Padding = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.meansList.Padding = new System.Windows.Forms.Padding(6);
             this.meansList.Size = new System.Drawing.Size(65, 24);
             this.meansList.TabIndex = 5;
             this.meansList.Text = "词义分析";
@@ -222,7 +221,7 @@
             label6.Location = new System.Drawing.Point(16, 144);
             label6.Margin = new System.Windows.Forms.Padding(4, 16, 4, 4);
             label6.Name = "label6";
-            label6.Padding = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            label6.Padding = new System.Windows.Forms.Padding(6);
             label6.Size = new System.Drawing.Size(43, 24);
             label6.TabIndex = 3;
             label6.Text = "例句";
@@ -255,9 +254,9 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.ex1.BackColor = System.Drawing.SystemColors.Window;
             this.ex1.Location = new System.Drawing.Point(34, 4);
-            this.ex1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.ex1.Margin = new System.Windows.Forms.Padding(4);
             this.ex1.Name = "ex1";
-            this.ex1.Padding = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.ex1.Padding = new System.Windows.Forms.Padding(6);
             this.ex1.Size = new System.Drawing.Size(580, 106);
             this.ex1.TabIndex = 6;
             this.ex1.Text = "例句1";
@@ -292,9 +291,9 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.ex2.Location = new System.Drawing.Point(34, 4);
-            this.ex2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.ex2.Margin = new System.Windows.Forms.Padding(4);
             this.ex2.Name = "ex2";
-            this.ex2.Padding = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.ex2.Padding = new System.Windows.Forms.Padding(6);
             this.ex2.Size = new System.Drawing.Size(580, 112);
             this.ex2.TabIndex = 6;
             this.ex2.Text = "例句2";
