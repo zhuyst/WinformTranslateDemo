@@ -1,7 +1,7 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
-using System.Reflection;
 using System.Resources;
+using Words.Properties;
 
 namespace Words
 {
@@ -25,8 +25,7 @@ namespace Words
 
         private static string ReadFile()
         {
-            var assembly = Assembly.GetEntryAssembly();
-            var manager = new ResourceManager("Words.Properties.Resources", assembly);
+            var manager = new ResourceManager("Words.Properties.Resources", typeof(Resources).Assembly);
             return manager.GetString(FileName);
         }
     }
