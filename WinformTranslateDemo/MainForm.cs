@@ -8,12 +8,14 @@ using System.Text;
 using System.Threading.Tasks;
 using Bing;
 using System.Windows.Forms;
+using SpeechLib;
 
 namespace WinformTranslateDemo
 {
     public partial class MainForm : Form
     {
         private TranslateApi translate;
+        private TranslateResult result;
         public MainForm()
         {
             InitializeComponent();
@@ -22,11 +24,15 @@ namespace WinformTranslateDemo
         private void MainForm_Load(object sender, EventArgs e)
         {
             var list = Words.Words.GetWords();
+            wordListBox.BeginUpdate();
             foreach (var item in list)
             {
-                wordListView.Items.Add(item);
+                wordListBox.Items.Add(item);
             }
+            wordListBox.EndUpdate();
             translate = new TranslateApi();
+            wordListBox.SelectedIndex = 0;
+
         }
 
         /// <summary>
@@ -41,13 +47,18 @@ namespace WinformTranslateDemo
 
         private void sound_MouseDown(object sender, MouseEventArgs e)
         {
+            SpeechVoiceSpeakFlags flag = SpeechVoiceSpeakFlags.SVSFlagsAsync;
+            SpVoice voice = new SpVoice();
+            voice.Voice = voice.GetVoices(string.Empty, string.Empty).Item(0);
+            voice.Speak(word.Text, flag);
+
 
         }
 
         private void wordListView_SelectedIndexChanged(object sender, EventArgs e)
         {
-            var text = wordListView.SelectedItem.ToString();
-            var result = translate.EnToZh(text);
+            var text = wordListBox.SelectedItem.ToString();
+            result = translate.EnToZh(text);
             word.Text = text;
             pho1.Text = $"美 [{result.Pronunciation.AmE}]";
             pho2.Text = $"英 [{result.Pronunciation.BrE}]";
@@ -62,6 +73,22 @@ namespace WinformTranslateDemo
             ex2.Clear();
             ex2.Add(result.Sams[1].Eng);
             ex2.Add(result.Sams[1].Chn);
+        }
+
+        private void ex1Sound_MouseClick(object sender, MouseEventArgs e)
+        {
+            SpeechVoiceSpeakFlags flag = SpeechVoiceSpeakFlags.SVSFlagsAsync;
+            SpVoice voice = new SpVoice();
+            voice.Voice = voice.GetVoices(string.Empty, string.Empty).Item(0);
+            voice.Speak(result.Sams[0].Eng, flag);
+        }
+
+        private void pictureBox1_MouseClick(object sender, MouseEventArgs e)
+        {
+            SpeechVoiceSpeakFlags flag = SpeechVoiceSpeakFlags.SVSFlagsAsync;
+            SpVoice voice = new SpVoice();
+            voice.Voice = voice.GetVoices(string.Empty, string.Empty).Item(0);
+            voice.Speak(result.Sams[1].Eng, flag);
         }
     }
 }
