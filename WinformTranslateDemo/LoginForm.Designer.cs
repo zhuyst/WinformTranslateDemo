@@ -49,6 +49,17 @@
             label1.TabIndex = 0;
             label1.Text = "用户名";
             // 
+            // label2
+            // 
+            label2.Anchor = System.Windows.Forms.AnchorStyles.None;
+            label2.AutoSize = true;
+            label2.Location = new System.Drawing.Point(52, 150);
+            label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            label2.Name = "label2";
+            label2.Size = new System.Drawing.Size(49, 20);
+            label2.TabIndex = 2;
+            label2.Text = "密码";
+            // 
             // usernameTextBox
             // 
             this.usernameTextBox.Anchor = System.Windows.Forms.AnchorStyles.None;
@@ -65,17 +76,6 @@
             this.passwordTextBox.PasswordChar = '*';
             this.passwordTextBox.Size = new System.Drawing.Size(238, 30);
             this.passwordTextBox.TabIndex = 3;
-            // 
-            // label2
-            // 
-            label2.Anchor = System.Windows.Forms.AnchorStyles.None;
-            label2.AutoSize = true;
-            label2.Location = new System.Drawing.Point(52, 150);
-            label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            label2.Name = "label2";
-            label2.Size = new System.Drawing.Size(49, 20);
-            label2.TabIndex = 2;
-            label2.Text = "密码";
             // 
             // loginButton
             // 
@@ -101,8 +101,8 @@
             // 
             // LoginForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 20F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoScaleDimensions = new System.Drawing.SizeF(120F, 120F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
             this.ClientSize = new System.Drawing.Size(488, 304);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.loginButton);
@@ -111,7 +111,7 @@
             this.Controls.Add(this.usernameTextBox);
             this.Controls.Add(label1);
             this.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "LoginForm";
             this.Text = "登录";
             this.ResumeLayout(false);

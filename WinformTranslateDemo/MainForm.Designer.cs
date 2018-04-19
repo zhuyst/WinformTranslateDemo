@@ -29,43 +29,43 @@
         private void InitializeComponent()
         {
             System.Windows.Forms.GroupBox groupBox1;
+            System.Windows.Forms.ColumnHeader columnHeader1;
             System.Windows.Forms.GroupBox groupBox2;
             System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
-            System.Windows.Forms.FlowLayoutPanel flowLayoutPanel4;
             System.Windows.Forms.FlowLayoutPanel flowLayoutPanel2;
             System.Windows.Forms.Label label6;
             System.Windows.Forms.Label label7;
-            System.Windows.Forms.Label label1;
             System.Windows.Forms.Panel panel2;
+            System.Windows.Forms.Label label1;
             this.wordListView = new System.Windows.Forms.ListView();
-            this.columnHeader1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.flowLayoutPanel4 = new System.Windows.Forms.FlowLayoutPanel();
             this.word = new System.Windows.Forms.Label();
             this.sound = new System.Windows.Forms.PictureBox();
             this.pho1 = new System.Windows.Forms.Label();
             this.pho2 = new System.Windows.Forms.Label();
             this.meansList = new WindowsFormsControlLibrary.MyLabel();
-            this.ex1Sound = new System.Windows.Forms.PictureBox();
-            this.ex1 = new WindowsFormsControlLibrary.MyLabel();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.ex1 = new WindowsFormsControlLibrary.MyLabel();
+            this.ex1Sound = new System.Windows.Forms.PictureBox();
             this.ex2 = new WindowsFormsControlLibrary.MyLabel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             groupBox1 = new System.Windows.Forms.GroupBox();
+            columnHeader1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             groupBox2 = new System.Windows.Forms.GroupBox();
             flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
-            flowLayoutPanel4 = new System.Windows.Forms.FlowLayoutPanel();
             flowLayoutPanel2 = new System.Windows.Forms.FlowLayoutPanel();
             label6 = new System.Windows.Forms.Label();
             label7 = new System.Windows.Forms.Label();
-            label1 = new System.Windows.Forms.Label();
             panel2 = new System.Windows.Forms.Panel();
+            label1 = new System.Windows.Forms.Label();
             groupBox1.SuspendLayout();
             groupBox2.SuspendLayout();
             flowLayoutPanel1.SuspendLayout();
-            flowLayoutPanel4.SuspendLayout();
+            this.flowLayoutPanel4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.sound)).BeginInit();
             flowLayoutPanel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.ex1Sound)).BeginInit();
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.ex1Sound)).BeginInit();
             panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -88,7 +88,7 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.wordListView.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
-            this.columnHeader1});
+            columnHeader1});
             this.wordListView.Location = new System.Drawing.Point(7, 25);
             this.wordListView.MultiSelect = false;
             this.wordListView.Name = "wordListView";
@@ -117,7 +117,7 @@
             flowLayoutPanel1.AutoScroll = true;
             flowLayoutPanel1.BackColor = System.Drawing.SystemColors.Window;
             flowLayoutPanel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            flowLayoutPanel1.Controls.Add(flowLayoutPanel4);
+            flowLayoutPanel1.Controls.Add(this.flowLayoutPanel4);
             flowLayoutPanel1.Controls.Add(flowLayoutPanel2);
             flowLayoutPanel1.Controls.Add(this.meansList);
             flowLayoutPanel1.Controls.Add(label6);
@@ -134,12 +134,12 @@
             // 
             // flowLayoutPanel4
             // 
-            flowLayoutPanel4.Controls.Add(this.word);
-            flowLayoutPanel4.Controls.Add(this.sound);
-            flowLayoutPanel4.Location = new System.Drawing.Point(18, 18);
-            flowLayoutPanel4.Name = "flowLayoutPanel4";
-            flowLayoutPanel4.Size = new System.Drawing.Size(772, 52);
-            flowLayoutPanel4.TabIndex = 7;
+            this.flowLayoutPanel4.Controls.Add(this.word);
+            this.flowLayoutPanel4.Controls.Add(this.sound);
+            this.flowLayoutPanel4.Location = new System.Drawing.Point(18, 18);
+            this.flowLayoutPanel4.Name = "flowLayoutPanel4";
+            this.flowLayoutPanel4.Size = new System.Drawing.Size(772, 52);
+            this.flowLayoutPanel4.TabIndex = 7;
             // 
             // word
             // 
@@ -230,16 +230,15 @@
             label7.Size = new System.Drawing.Size(770, 2);
             label7.TabIndex = 4;
             // 
-            // ex1Sound
+            // panel1
             // 
-            this.ex1Sound.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.ex1Sound.Image = global::WinformTranslateDemo.Properties.Resources.sound;
-            this.ex1Sound.Location = new System.Drawing.Point(5, 3);
-            this.ex1Sound.Name = "ex1Sound";
-            this.ex1Sound.Size = new System.Drawing.Size(29, 33);
-            this.ex1Sound.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.ex1Sound.TabIndex = 5;
-            this.ex1Sound.TabStop = false;
+            this.panel1.BackColor = System.Drawing.SystemColors.Window;
+            this.panel1.Controls.Add(this.ex1);
+            this.panel1.Controls.Add(this.ex1Sound);
+            this.panel1.Location = new System.Drawing.Point(18, 223);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(772, 143);
+            this.panel1.TabIndex = 8;
             // 
             // ex1
             // 
@@ -255,27 +254,16 @@
             this.ex1.TabIndex = 6;
             this.ex1.Text = "例句1";
             // 
-            // label1
+            // ex1Sound
             // 
-            label1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left)));
-            label1.AutoSize = true;
-            label1.Font = new System.Drawing.Font("宋体", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            label1.Location = new System.Drawing.Point(332, 265);
-            label1.Name = "label1";
-            label1.Size = new System.Drawing.Size(25, 15);
-            label1.TabIndex = 4;
-            label1.Text = "->";
-            // 
-            // panel1
-            // 
-            this.panel1.BackColor = System.Drawing.SystemColors.Window;
-            this.panel1.Controls.Add(this.ex1);
-            this.panel1.Controls.Add(this.ex1Sound);
-            this.panel1.Location = new System.Drawing.Point(18, 223);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(772, 143);
-            this.panel1.TabIndex = 8;
+            this.ex1Sound.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.ex1Sound.Image = global::WinformTranslateDemo.Properties.Resources.sound;
+            this.ex1Sound.Location = new System.Drawing.Point(5, 3);
+            this.ex1Sound.Name = "ex1Sound";
+            this.ex1Sound.Size = new System.Drawing.Size(29, 33);
+            this.ex1Sound.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.ex1Sound.TabIndex = 5;
+            this.ex1Sound.TabStop = false;
             // 
             // panel2
             // 
@@ -311,10 +299,22 @@
             this.pictureBox1.TabIndex = 5;
             this.pictureBox1.TabStop = false;
             // 
+            // label1
+            // 
+            label1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
+            label1.AutoSize = true;
+            label1.Font = new System.Drawing.Font("宋体", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            label1.Location = new System.Drawing.Point(332, 265);
+            label1.Name = "label1";
+            label1.Size = new System.Drawing.Size(25, 15);
+            label1.TabIndex = 4;
+            label1.Text = "->";
+            // 
             // MainForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoScaleDimensions = new System.Drawing.SizeF(120F, 120F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
             this.ClientSize = new System.Drawing.Size(1217, 615);
             this.Controls.Add(label1);
             this.Controls.Add(groupBox2);
@@ -327,13 +327,13 @@
             groupBox2.ResumeLayout(false);
             flowLayoutPanel1.ResumeLayout(false);
             flowLayoutPanel1.PerformLayout();
-            flowLayoutPanel4.ResumeLayout(false);
-            flowLayoutPanel4.PerformLayout();
+            this.flowLayoutPanel4.ResumeLayout(false);
+            this.flowLayoutPanel4.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.sound)).EndInit();
             flowLayoutPanel2.ResumeLayout(false);
             flowLayoutPanel2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.ex1Sound)).EndInit();
             this.panel1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.ex1Sound)).EndInit();
             panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
@@ -344,7 +344,6 @@
         #endregion
 
         private System.Windows.Forms.ListView wordListView;
-        private System.Windows.Forms.ColumnHeader columnHeader1;
         private System.Windows.Forms.Label word;
         private System.Windows.Forms.Label pho1;
         private WindowsFormsControlLibrary.MyLabel meansList;
@@ -355,5 +354,6 @@
         private WindowsFormsControlLibrary.MyLabel ex2;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel4;
     }
 }
