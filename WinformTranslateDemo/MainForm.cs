@@ -2,6 +2,7 @@
 using SpeechLib;
 using System;
 using System.Windows.Forms;
+using WindowsFormsControlLibrary;
 
 namespace WinformTranslateDemo
 {
@@ -45,12 +46,13 @@ namespace WinformTranslateDemo
             {
                 meansList.Add($"{item.Pos} { item.Def }");
             }
-            ex1.Clear();
-            ex1.Add(_result.Sams[0].Eng);
-            ex1.Add(_result.Sams[0].Chn);
-            ex2.Clear();
-            ex2.Add(_result.Sams[1].Eng);
-            ex2.Add(_result.Sams[1].Chn);
+            //例句
+            exFlowPanel.Controls.Clear();
+            foreach (var item in _result.Sams)
+            {
+                exFlowPanel.Controls.Add(new ExampleSentence { Eng = item.Eng, Chn = item.Chn });
+            }
+            ExAutoSize();
         }
 
         /// <summary>
@@ -70,35 +72,18 @@ namespace WinformTranslateDemo
         /// <param name="e"></param>
         private void sound_MouseClick(object sender, MouseEventArgs e)
         {
-            SpeechVoice(word.Text);
-        }
-
-        /// <summary>
-        /// 朗读例句1
-        /// </summary>
-        /// <param name="sender"></param>
-        /// <param name="e"></param>
-        private void ex1Sound_MouseClick(object sender, MouseEventArgs e)
-        {
-            SpeechVoice(_result.Sams[0].Eng);
-        }
-
-        /// <summary>
-        /// 朗读例句2
-        /// </summary>
-        /// <param name="sender"></param>
-        /// <param name="e"></param>
-        private void ex2Sound_MouseClick(object sender, MouseEventArgs e)
-        {
-            SpeechVoice(_result.Sams[1].Eng);
-        }
-
-        private void SpeechVoice(string text)
-        {
             var flag = SpeechVoiceSpeakFlags.SVSFlagsAsync;
             var voice = new SpVoice();
             voice.Voice = voice.GetVoices(string.Empty, string.Empty).Item(0);
-            voice.Speak(text, flag);
+            voice.Speak(word.Text, flag);
+        }
+
+        /// <summary>
+        /// 自动调整例句区域的高度
+        /// </summary>
+        private void ExAutoSize()
+        {
+            exFlowPanel.Height = exFlowPanel.Parent.Height - (meansList.Top + meansList.Height) - 80;
         }
     }
 }
