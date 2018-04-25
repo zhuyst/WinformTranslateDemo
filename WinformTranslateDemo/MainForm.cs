@@ -3,7 +3,6 @@ using SpeechLib;
 using System;
 using System.Windows.Forms;
 using System.Drawing;
-using WindowsFormsControlLibrary;
 
 namespace WinformTranslateDemo
 {
