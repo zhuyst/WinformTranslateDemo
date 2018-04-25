@@ -2,6 +2,7 @@
 using SpeechLib;
 using System;
 using System.Windows.Forms;
+using System.Drawing;
 
 namespace WinformTranslateDemo
 {
@@ -99,6 +100,19 @@ namespace WinformTranslateDemo
             var voice = new SpVoice();
             voice.Voice = voice.GetVoices(string.Empty, string.Empty).Item(0);
             voice.Speak(text, flag);
+        }
+
+
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void word_Paint(object sender, PaintEventArgs e)
+        {
+            Graphics g = e.Graphics;
+            SolidBrush drawBrush = new SolidBrush(Color.Red);
+            g.DrawString(word.Text,word.Font,drawBrush,6,6);
         }
     }
 }
