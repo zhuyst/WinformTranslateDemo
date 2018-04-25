@@ -3,6 +3,7 @@ using SpeechLib;
 using System;
 using System.Windows.Forms;
 using System.Drawing;
+using WindowsFormsControlLibrary;
 
 namespace WinformTranslateDemo
 {
@@ -89,14 +90,14 @@ namespace WinformTranslateDemo
 
         private void timer1_Tick(object sender, EventArgs e)
         {
-            
+
         }
 
         private void word_Paint(object sender, PaintEventArgs e)
         {
             Graphics g = e.Graphics;
             SolidBrush drawBrush = new SolidBrush(Color.Red);
-            g.DrawString(word.Text,word.Font,drawBrush,6,6);
+            g.DrawString(word.Text, word.Font, drawBrush, 6, 6);
         }
     }
 }
