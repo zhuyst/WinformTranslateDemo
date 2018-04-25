@@ -31,41 +31,32 @@
             System.Windows.Forms.GroupBox groupBox1;
             System.Windows.Forms.GroupBox groupBox2;
             System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
+            System.Windows.Forms.FlowLayoutPanel flowLayoutPanel4;
             System.Windows.Forms.FlowLayoutPanel flowLayoutPanel2;
             System.Windows.Forms.Label label6;
             System.Windows.Forms.Label label7;
-            System.Windows.Forms.Panel panel2;
             System.Windows.Forms.Label label1;
             this.wordListBox = new System.Windows.Forms.ListBox();
-            this.flowLayoutPanel4 = new System.Windows.Forms.FlowLayoutPanel();
             this.word = new System.Windows.Forms.Label();
             this.sound = new System.Windows.Forms.PictureBox();
             this.pho1 = new System.Windows.Forms.Label();
             this.pho2 = new System.Windows.Forms.Label();
             this.meansList = new WindowsFormsControlLibrary.MyLabel();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.ex1 = new WindowsFormsControlLibrary.MyLabel();
-            this.ex1Sound = new System.Windows.Forms.PictureBox();
-            this.ex2 = new WindowsFormsControlLibrary.MyLabel();
-            this.ex2Sound = new System.Windows.Forms.PictureBox();
+            this.exFlowPanel = new System.Windows.Forms.FlowLayoutPanel();
             groupBox1 = new System.Windows.Forms.GroupBox();
             groupBox2 = new System.Windows.Forms.GroupBox();
             flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
+            flowLayoutPanel4 = new System.Windows.Forms.FlowLayoutPanel();
             flowLayoutPanel2 = new System.Windows.Forms.FlowLayoutPanel();
             label6 = new System.Windows.Forms.Label();
             label7 = new System.Windows.Forms.Label();
-            panel2 = new System.Windows.Forms.Panel();
             label1 = new System.Windows.Forms.Label();
             groupBox1.SuspendLayout();
             groupBox2.SuspendLayout();
             flowLayoutPanel1.SuspendLayout();
-            this.flowLayoutPanel4.SuspendLayout();
+            flowLayoutPanel4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.sound)).BeginInit();
             flowLayoutPanel2.SuspendLayout();
-            this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.ex1Sound)).BeginInit();
-            panel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.ex2Sound)).BeginInit();
             this.SuspendLayout();
             // 
             // groupBox1
@@ -115,16 +106,14 @@
             flowLayoutPanel1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            flowLayoutPanel1.AutoScroll = true;
             flowLayoutPanel1.BackColor = System.Drawing.SystemColors.Window;
             flowLayoutPanel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            flowLayoutPanel1.Controls.Add(this.flowLayoutPanel4);
+            flowLayoutPanel1.Controls.Add(flowLayoutPanel4);
             flowLayoutPanel1.Controls.Add(flowLayoutPanel2);
             flowLayoutPanel1.Controls.Add(this.meansList);
             flowLayoutPanel1.Controls.Add(label6);
             flowLayoutPanel1.Controls.Add(label7);
-            flowLayoutPanel1.Controls.Add(this.panel1);
-            flowLayoutPanel1.Controls.Add(panel2);
+            flowLayoutPanel1.Controls.Add(this.exFlowPanel);
             flowLayoutPanel1.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
             flowLayoutPanel1.Location = new System.Drawing.Point(6, 24);
             flowLayoutPanel1.Margin = new System.Windows.Forms.Padding(2);
@@ -136,13 +125,13 @@
             // 
             // flowLayoutPanel4
             // 
-            this.flowLayoutPanel4.Controls.Add(this.word);
-            this.flowLayoutPanel4.Controls.Add(this.sound);
-            this.flowLayoutPanel4.Location = new System.Drawing.Point(17, 17);
-            this.flowLayoutPanel4.Margin = new System.Windows.Forms.Padding(2);
-            this.flowLayoutPanel4.Name = "flowLayoutPanel4";
-            this.flowLayoutPanel4.Size = new System.Drawing.Size(772, 52);
-            this.flowLayoutPanel4.TabIndex = 7;
+            flowLayoutPanel4.Controls.Add(this.word);
+            flowLayoutPanel4.Controls.Add(this.sound);
+            flowLayoutPanel4.Location = new System.Drawing.Point(17, 17);
+            flowLayoutPanel4.Margin = new System.Windows.Forms.Padding(2);
+            flowLayoutPanel4.Name = "flowLayoutPanel4";
+            flowLayoutPanel4.Size = new System.Drawing.Size(772, 52);
+            flowLayoutPanel4.TabIndex = 7;
             // 
             // word
             // 
@@ -203,17 +192,6 @@
             this.pho2.TabIndex = 3;
             this.pho2.Text = "音标2";
             // 
-            // meansList
-            // 
-            this.meansList.AutoSize = true;
-            this.meansList.Location = new System.Drawing.Point(20, 122);
-            this.meansList.Margin = new System.Windows.Forms.Padding(5);
-            this.meansList.Name = "meansList";
-            this.meansList.Padding = new System.Windows.Forms.Padding(8);
-            this.meansList.Size = new System.Drawing.Size(83, 31);
-            this.meansList.TabIndex = 5;
-            this.meansList.Text = "词义分析";
-            // 
             // label6
             // 
             label6.AutoSize = true;
@@ -236,81 +214,6 @@
             label7.Size = new System.Drawing.Size(770, 2);
             label7.TabIndex = 4;
             // 
-            // panel1
-            // 
-            this.panel1.BackColor = System.Drawing.SystemColors.Window;
-            this.panel1.Controls.Add(this.ex1);
-            this.panel1.Controls.Add(this.ex1Sound);
-            this.panel1.Location = new System.Drawing.Point(17, 218);
-            this.panel1.Margin = new System.Windows.Forms.Padding(2);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(772, 142);
-            this.panel1.TabIndex = 8;
-            // 
-            // ex1
-            // 
-            this.ex1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.ex1.BackColor = System.Drawing.SystemColors.Window;
-            this.ex1.Location = new System.Drawing.Point(42, 5);
-            this.ex1.Margin = new System.Windows.Forms.Padding(5);
-            this.ex1.Name = "ex1";
-            this.ex1.Padding = new System.Windows.Forms.Padding(8);
-            this.ex1.Size = new System.Drawing.Size(725, 132);
-            this.ex1.TabIndex = 6;
-            this.ex1.Text = "例句1";
-            // 
-            // ex1Sound
-            // 
-            this.ex1Sound.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.ex1Sound.Image = global::WinformTranslateDemo.Properties.Resources.sound;
-            this.ex1Sound.Location = new System.Drawing.Point(5, 2);
-            this.ex1Sound.Margin = new System.Windows.Forms.Padding(2);
-            this.ex1Sound.Name = "ex1Sound";
-            this.ex1Sound.Size = new System.Drawing.Size(29, 32);
-            this.ex1Sound.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.ex1Sound.TabIndex = 5;
-            this.ex1Sound.TabStop = false;
-            this.ex1Sound.MouseClick += new System.Windows.Forms.MouseEventHandler(this.ex1Sound_MouseClick);
-            // 
-            // panel2
-            // 
-            panel2.AutoScroll = true;
-            panel2.Controls.Add(this.ex2);
-            panel2.Controls.Add(this.ex2Sound);
-            panel2.Location = new System.Drawing.Point(17, 364);
-            panel2.Margin = new System.Windows.Forms.Padding(2);
-            panel2.Name = "panel2";
-            panel2.Size = new System.Drawing.Size(772, 150);
-            panel2.TabIndex = 9;
-            // 
-            // ex2
-            // 
-            this.ex2.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.ex2.Location = new System.Drawing.Point(42, 5);
-            this.ex2.Margin = new System.Windows.Forms.Padding(5);
-            this.ex2.Name = "ex2";
-            this.ex2.Padding = new System.Windows.Forms.Padding(8);
-            this.ex2.Size = new System.Drawing.Size(725, 140);
-            this.ex2.TabIndex = 6;
-            this.ex2.Text = "例句2";
-            // 
-            // ex2Sound
-            // 
-            this.ex2Sound.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.ex2Sound.Image = global::WinformTranslateDemo.Properties.Resources.sound;
-            this.ex2Sound.Location = new System.Drawing.Point(5, 2);
-            this.ex2Sound.Margin = new System.Windows.Forms.Padding(2);
-            this.ex2Sound.Name = "ex2Sound";
-            this.ex2Sound.Size = new System.Drawing.Size(29, 32);
-            this.ex2Sound.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.ex2Sound.TabIndex = 5;
-            this.ex2Sound.TabStop = false;
-            this.ex2Sound.MouseClick += new System.Windows.Forms.MouseEventHandler(this.ex2Sound_MouseClick);
-            // 
             // label1
             // 
             label1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
@@ -323,6 +226,27 @@
             label1.Size = new System.Drawing.Size(25, 15);
             label1.TabIndex = 4;
             label1.Text = "->";
+            // 
+            // meansList
+            // 
+            this.meansList.AutoSize = true;
+            this.meansList.Location = new System.Drawing.Point(20, 122);
+            this.meansList.Margin = new System.Windows.Forms.Padding(5);
+            this.meansList.Name = "meansList";
+            this.meansList.Padding = new System.Windows.Forms.Padding(8);
+            this.meansList.Size = new System.Drawing.Size(83, 31);
+            this.meansList.TabIndex = 5;
+            this.meansList.Text = "词义分析";
+            // 
+            // exFlowPanel
+            // 
+            this.exFlowPanel.AutoScroll = true;
+            this.exFlowPanel.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
+            this.exFlowPanel.Location = new System.Drawing.Point(18, 219);
+            this.exFlowPanel.Name = "exFlowPanel";
+            this.exFlowPanel.Size = new System.Drawing.Size(769, 264);
+            this.exFlowPanel.TabIndex = 10;
+            this.exFlowPanel.WrapContents = false;
             // 
             // MainForm
             // 
@@ -343,15 +267,11 @@
             groupBox2.ResumeLayout(false);
             flowLayoutPanel1.ResumeLayout(false);
             flowLayoutPanel1.PerformLayout();
-            this.flowLayoutPanel4.ResumeLayout(false);
-            this.flowLayoutPanel4.PerformLayout();
+            flowLayoutPanel4.ResumeLayout(false);
+            flowLayoutPanel4.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.sound)).EndInit();
             flowLayoutPanel2.ResumeLayout(false);
             flowLayoutPanel2.PerformLayout();
-            this.panel1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.ex1Sound)).EndInit();
-            panel2.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.ex2Sound)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -361,14 +281,9 @@
         private System.Windows.Forms.Label word;
         private System.Windows.Forms.Label pho1;
         private WindowsFormsControlLibrary.MyLabel meansList;
-        private System.Windows.Forms.PictureBox ex1Sound;
-        private WindowsFormsControlLibrary.MyLabel ex1;
         private System.Windows.Forms.Label pho2;
         private System.Windows.Forms.PictureBox sound;
-        private WindowsFormsControlLibrary.MyLabel ex2;
-        private System.Windows.Forms.PictureBox ex2Sound;
-        private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel4;
         private System.Windows.Forms.ListBox wordListBox;
+        private System.Windows.Forms.FlowLayoutPanel exFlowPanel;
     }
 }

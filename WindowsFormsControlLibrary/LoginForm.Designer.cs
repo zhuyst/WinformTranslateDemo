@@ -42,10 +42,9 @@
             // 
             label1.Anchor = System.Windows.Forms.AnchorStyles.None;
             label1.AutoSize = true;
-            label1.Location = new System.Drawing.Point(52, 64);
-            label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            label1.Location = new System.Drawing.Point(42, 51);
             label1.Name = "label1";
-            label1.Size = new System.Drawing.Size(69, 20);
+            label1.Size = new System.Drawing.Size(56, 16);
             label1.TabIndex = 0;
             label1.Text = "用户名";
             // 
@@ -53,36 +52,38 @@
             // 
             label2.Anchor = System.Windows.Forms.AnchorStyles.None;
             label2.AutoSize = true;
-            label2.Location = new System.Drawing.Point(52, 150);
-            label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            label2.Location = new System.Drawing.Point(42, 120);
             label2.Name = "label2";
-            label2.Size = new System.Drawing.Size(49, 20);
+            label2.Size = new System.Drawing.Size(40, 16);
             label2.TabIndex = 2;
             label2.Text = "密码";
             // 
             // usernameTextBox
             // 
             this.usernameTextBox.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.usernameTextBox.Location = new System.Drawing.Point(157, 58);
+            this.usernameTextBox.Location = new System.Drawing.Point(126, 46);
+            this.usernameTextBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.usernameTextBox.Name = "usernameTextBox";
-            this.usernameTextBox.Size = new System.Drawing.Size(238, 30);
+            this.usernameTextBox.Size = new System.Drawing.Size(191, 26);
             this.usernameTextBox.TabIndex = 1;
             // 
             // passwordTextBox
             // 
             this.passwordTextBox.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.passwordTextBox.Location = new System.Drawing.Point(157, 144);
+            this.passwordTextBox.Location = new System.Drawing.Point(126, 115);
+            this.passwordTextBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.passwordTextBox.Name = "passwordTextBox";
             this.passwordTextBox.PasswordChar = '*';
-            this.passwordTextBox.Size = new System.Drawing.Size(238, 30);
+            this.passwordTextBox.Size = new System.Drawing.Size(191, 26);
             this.passwordTextBox.TabIndex = 3;
             // 
             // loginButton
             // 
             this.loginButton.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.loginButton.Location = new System.Drawing.Point(304, 212);
+            this.loginButton.Location = new System.Drawing.Point(243, 170);
+            this.loginButton.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.loginButton.Name = "loginButton";
-            this.loginButton.Size = new System.Drawing.Size(91, 39);
+            this.loginButton.Size = new System.Drawing.Size(73, 31);
             this.loginButton.TabIndex = 4;
             this.loginButton.Text = "登录";
             this.loginButton.UseVisualStyleBackColor = true;
@@ -93,17 +94,18 @@
             this.label3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("宋体", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.label3.Location = new System.Drawing.Point(13, 277);
+            this.label3.Location = new System.Drawing.Point(10, 222);
+            this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(232, 15);
+            this.label3.Size = new System.Drawing.Size(185, 12);
             this.label3.TabIndex = 5;
             this.label3.Text = "开发人员：陈恺、朱悦星、郭友达";
             // 
             // LoginForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(120F, 120F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
-            this.ClientSize = new System.Drawing.Size(488, 304);
+            this.ClientSize = new System.Drawing.Size(390, 243);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.loginButton);
             this.Controls.Add(this.passwordTextBox);
@@ -111,7 +113,6 @@
             this.Controls.Add(this.usernameTextBox);
             this.Controls.Add(label1);
             this.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "LoginForm";
             this.Text = "登录";
             this.ResumeLayout(false);
