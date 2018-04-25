@@ -19,7 +19,12 @@ namespace WinformTranslateDemo
 
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new LoginForm());
+
+            var loginForm = new LoginForm("root","123456", () =>
+            {
+                new MainForm().Show();
+            });
+            Application.Run(loginForm);
         }
     }
 }
