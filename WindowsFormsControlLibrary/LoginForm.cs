@@ -23,15 +23,15 @@ namespace WinformTranslateDemo
 
         private void loginButton_Click(object sender, EventArgs e)
         {
-            //if (usernameTextBox.Text == _rightUsername && passwordTextBox.Text == _rightPassword)
-            //{
+            if (usernameTextBox.Text == _rightUsername && passwordTextBox.Text == _rightPassword)
+            {
                 Hide();
                 _successHandler.Invoke();
-            //}
-            //else
-            //{
-              //  MessageBox.Show("用户名或密码错误！", "错误", MessageBoxButtons.OK);
-            //}
+            }
+            else
+            {
+                MessageBox.Show("用户名或密码错误！", "错误", MessageBoxButtons.OK);
+            }
         }
     }
 }
