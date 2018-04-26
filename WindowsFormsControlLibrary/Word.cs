@@ -3,7 +3,7 @@ using System.Windows.Forms;
 
 namespace WindowsFormsControlLibrary
 {
-    public partial class Word :FlowLayoutPanel
+    public partial class Word : FlowLayoutPanel
     {
         public Word()
         {
@@ -17,12 +17,14 @@ namespace WindowsFormsControlLibrary
         public void AddLabel(string word)
         {
             Controls.Clear();
-            for(var i=0;i<word.Length;i++)
+            foreach (var t in word)
             {
-                var label = new Label();
-                label.Text = word[i].ToString();
-                label.AutoSize = true;              
-                label.Font = new Font(this.Font.FontFamily, 20);
+                var label = new Label
+                {
+                    Text = t.ToString(),
+                    AutoSize = true,
+                    Font = new Font(this.Font.FontFamily, 20)
+                };
                 //Console.WriteLine(label.Text);
                 Controls.Add(label);
             }

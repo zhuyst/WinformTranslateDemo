@@ -1,4 +1,4 @@
-﻿namespace WinformTranslateDemo
+﻿namespace WindowsFormsControlLibrary
 {
     partial class LoginForm
     {

@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Windows.Forms;
 
-namespace WinformTranslateDemo
+namespace WindowsFormsControlLibrary
 {
     public partial class LoginForm : Form
     {

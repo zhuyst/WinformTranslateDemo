@@ -11,7 +11,7 @@ namespace WinformTranslateDemo
     {
         private TranslateApi _translate;
         private TranslateResult _result;
-        private int flag = 0;
+        private int _flag = 0;
 
         public MainForm()
         {
@@ -39,12 +39,12 @@ namespace WinformTranslateDemo
         private void wordListBox_SelectedIndexChanged(object sender, EventArgs e)
         {
             timer1.Stop();
-            flag = 0;
+            _flag = 0;
             var text = wordListBox.SelectedItem.ToString();
             _result = _translate.EnToZh(text);
             word.Text = text;
             word1.AddLabel(text);
-            
+
             pho1.Text = $"美 [{_result.Pronunciation.AmE}]";
             pho2.Text = $"英 [{_result.Pronunciation.BrE}]";
             meansList.Clear();
@@ -98,21 +98,22 @@ namespace WinformTranslateDemo
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
-        private void timer1_Tick_1(object sender, EventArgs e)
+        private void timer1_Tick(object sender, EventArgs e)
         {
-            if (word1.Controls.Count > flag)
+            if (word1.Controls.Count > _flag)
             {
-                word1.Controls[flag].ForeColor = Color.Chocolate;
-                word1.Controls[flag].Font = new Font(this.Font.FontFamily, 25);
-                               
+                word1.Controls[_flag].ForeColor = Color.Chocolate;
+                word1.Controls[_flag].Font = new Font(Font.FontFamily, 25);
+
                 //Console.WriteLine("as");
-                flag++;
+                _flag++;
             }
             else
-            {   for(var i=0;i< word1.Controls.Count;i++)
+            {
+                for (var i = 0; i < word1.Controls.Count; i++)
                 {
                     word1.Controls[i].ForeColor = Color.Black;
-                    word1.Controls[i].Font = new Font(this.Font.FontFamily, 15);
+                    word1.Controls[i].Font = new Font(Font.FontFamily, 15);
                 }
                 timer1.Stop();
             }
