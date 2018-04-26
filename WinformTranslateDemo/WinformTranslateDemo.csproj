@@ -32,6 +32,9 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="DSkin">
+      <HintPath>..\..\..\..\SkyBlog\client_windows\SkyBlog\SkyBlog\bin\Debug\DSkin.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Design" />
@@ -109,6 +112,18 @@
       <Isolated>False</Isolated>
       <EmbedInteropTypes>True</EmbedInteropTypes>
     </COMReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\QQ图片20180426211853.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\QQ图片20180426211916.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\QQ图片20180426211934.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\QQ图片20180426213350.gif" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
