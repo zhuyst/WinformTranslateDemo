@@ -42,7 +42,7 @@ namespace WinformTranslateDemo
             flag = 0;
             var text = wordListBox.SelectedItem.ToString();
             _result = _translate.EnToZh(text);
-            //word.Text = text;
+            word.Text = text;
             word1.AddLabel(text);
             
             pho1.Text = $"美 [{_result.Pronunciation.AmE}]";
