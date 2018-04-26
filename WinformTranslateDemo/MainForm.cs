@@ -11,6 +11,7 @@ namespace WinformTranslateDemo
     {
         private TranslateApi _translate;
         private TranslateResult _result;
+        private int flag = 0;
 
         public MainForm()
         {
@@ -37,9 +38,13 @@ namespace WinformTranslateDemo
         /// <param name="e"></param>
         private void wordListBox_SelectedIndexChanged(object sender, EventArgs e)
         {
+            timer1.Stop();
+            flag = 0;
             var text = wordListBox.SelectedItem.ToString();
             _result = _translate.EnToZh(text);
-            word.Text = text;
+            //word.Text = text;
+            word1.AddLabel(text);
+            
             pho1.Text = $"美 [{_result.Pronunciation.AmE}]";
             pho2.Text = $"英 [{_result.Pronunciation.BrE}]";
             meansList.Clear();
@@ -54,6 +59,7 @@ namespace WinformTranslateDemo
                 exFlowPanel.Controls.Add(new ExampleSentence { Eng = item.Eng, Chn = item.Chn });
             }
             ExAutoSize();
+            timer1.Start();
         }
 
         /// <summary>
@@ -87,17 +93,29 @@ namespace WinformTranslateDemo
             exFlowPanel.Height = exFlowPanel.Parent.Height - (meansList.Top + meansList.Height) - 80;
         }
 
-
-        private void timer1_Tick(object sender, EventArgs e)
+        /// <summary>
+        /// 计时器，动态显示单词
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void timer1_Tick_1(object sender, EventArgs e)
         {
-
-        }
-
-        private void word_Paint(object sender, PaintEventArgs e)
-        {
-            Graphics g = e.Graphics;
-            SolidBrush drawBrush = new SolidBrush(Color.Red);
-            g.DrawString(word.Text, word.Font, drawBrush, 6, 6);
+            if (word1.Controls.Count > flag)
+            {
+                word1.Controls[flag].ForeColor = Color.Chocolate;
+                word1.Controls[flag].Font = new Font(this.Font.FontFamily, 25);
+                               
+                //Console.WriteLine("as");
+                flag++;
+            }
+            else
+            {   for(var i=0;i< word1.Controls.Count;i++)
+                {
+                    word1.Controls[i].ForeColor = Color.Black;
+                    word1.Controls[i].Font = new Font(this.Font.FontFamily, 15);
+                }
+                timer1.Stop();
+            }
         }
     }
 }
