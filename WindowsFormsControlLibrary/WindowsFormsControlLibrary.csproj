@@ -51,11 +51,11 @@
     <Compile Include="ExampleSentence.Designer.cs">
       <DependentUpon>ExampleSentence.cs</DependentUpon>
     </Compile>
-    <Compile Include="LoginForm.cs">
-      <SubType>Form</SubType>
+    <Compile Include="LoginControl.cs">
+      <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="LoginForm.Designer.cs">
-      <DependentUpon>LoginForm.cs</DependentUpon>
+    <Compile Include="LoginControl.Designer.cs">
+      <DependentUpon>LoginControl.cs</DependentUpon>
     </Compile>
     <Compile Include="MyLabel.cs">
       <SubType>Component</SubType>
@@ -81,8 +81,8 @@
     <EmbeddedResource Include="ExampleSentence.resx">
       <DependentUpon>ExampleSentence.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="LoginForm.resx">
-      <DependentUpon>LoginForm.cs</DependentUpon>
+    <EmbeddedResource Include="LoginControl.resx">
+      <DependentUpon>LoginControl.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

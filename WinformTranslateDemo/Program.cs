@@ -21,11 +21,11 @@ namespace WinformTranslateDemo
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
 
-            var loginForm = new LoginForm("root","123456", () =>
-            {
-                new MainForm().Show();
-            });
-            Application.Run(loginForm);
+//            var loginForm = new LoginForm("root","123456", () =>
+//            {
+//                new MainForm().Show();
+//            });
+            Application.Run(new MainForm());
         }
     }
 }

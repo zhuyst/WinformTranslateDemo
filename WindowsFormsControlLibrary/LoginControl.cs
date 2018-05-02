@@ -3,8 +3,16 @@ using System.Windows.Forms;
 
 namespace WindowsFormsControlLibrary
 {
-    public partial class LoginForm : Form
+    public partial class LoginControl : UserControl
     {
+        public LoginControl(string username, string password, SuccessHandler successHandler)
+        {
+            InitializeComponent();
+            _rightUsername = username;
+            _rightPassword = password;
+            _successHandler = successHandler;
+        }
+
         private readonly string _rightUsername;
 
         private readonly string _rightPassword;
@@ -12,14 +20,6 @@ namespace WindowsFormsControlLibrary
         private readonly SuccessHandler _successHandler;
 
         public delegate void SuccessHandler();
-
-        public LoginForm(string username,string password,SuccessHandler successHandler)
-        {
-            InitializeComponent();
-            _rightUsername = username;
-            _rightPassword = password;
-            _successHandler = successHandler;
-        }
 
         private void loginButton_Click(object sender, EventArgs e)
         {
