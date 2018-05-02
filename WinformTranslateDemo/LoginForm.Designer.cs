@@ -50,7 +50,7 @@
             this.ClientSize = new System.Drawing.Size(488, 304);
             this.Controls.Add(this.label3);
             this.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "LoginForm";
             this.Text = "登录";
             this.ResumeLayout(false);

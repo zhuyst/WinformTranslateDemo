@@ -5,28 +5,21 @@ namespace WindowsFormsControlLibrary
 {
     public partial class LoginControl : UserControl
     {
-        public LoginControl(string username, string password, SuccessHandler successHandler)
-        {
-            InitializeComponent();
-            _rightUsername = username;
-            _rightPassword = password;
-            _successHandler = successHandler;
-        }
 
-        private readonly string _rightUsername;
+        public string RightUsername { get; set; }
 
-        private readonly string _rightPassword;
+        public string RightPassword { get; set; }
 
-        private readonly SuccessHandler _successHandler;
+        public SuccessHandler successHandler { get; set; }
 
         public delegate void SuccessHandler();
 
         private void loginButton_Click(object sender, EventArgs e)
         {
-            if (usernameTextBox.Text == _rightUsername && passwordTextBox.Text == _rightPassword)
+            if (usernameTextBox.Text == RightUsername && passwordTextBox.Text == RightPassword)
             {
                 Hide();
-                _successHandler.Invoke();
+                successHandler.Invoke();
             }
             else
             {

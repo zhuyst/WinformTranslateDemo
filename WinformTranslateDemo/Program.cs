@@ -25,7 +25,7 @@ namespace WinformTranslateDemo
 //            {
 //                new MainForm().Show();
 //            });
-            Application.Run(new MainForm());
+            Application.Run(new LoginForm());
         }
     }
 }
