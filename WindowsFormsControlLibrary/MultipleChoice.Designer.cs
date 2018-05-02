@@ -28,11 +28,13 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.Windows.Forms.Label label1;
             this.word = new System.Windows.Forms.Label();
             this.roundButton4 = new WindowsFormsControlLibrary.RoundButton();
             this.roundButton3 = new WindowsFormsControlLibrary.RoundButton();
             this.roundButton2 = new WindowsFormsControlLibrary.RoundButton();
             this.roundButton1 = new WindowsFormsControlLibrary.RoundButton();
+            label1 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // word
@@ -42,7 +44,7 @@
             this.word.ForeColor = System.Drawing.Color.OrangeRed;
             this.word.Location = new System.Drawing.Point(237, 44);
             this.word.Name = "word";
-            this.word.Size = new System.Drawing.Size(137, 55);
+            this.word.Size = new System.Drawing.Size(133, 53);
             this.word.TabIndex = 0;
             this.word.Text = "word";
             // 
@@ -50,6 +52,7 @@
             // 
             this.roundButton4.BackColor = System.Drawing.Color.Beige;
             this.roundButton4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.roundButton4.Cursor = System.Windows.Forms.Cursors.Hand;
             this.roundButton4.FlatAppearance.BorderSize = 0;
             this.roundButton4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.roundButton4.Font = new System.Drawing.Font("MS Reference Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -68,6 +71,7 @@
             // 
             this.roundButton3.BackColor = System.Drawing.Color.Beige;
             this.roundButton3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.roundButton3.Cursor = System.Windows.Forms.Cursors.Hand;
             this.roundButton3.FlatAppearance.BorderSize = 0;
             this.roundButton3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.roundButton3.Font = new System.Drawing.Font("MS Reference Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -86,6 +90,7 @@
             // 
             this.roundButton2.BackColor = System.Drawing.Color.Beige;
             this.roundButton2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.roundButton2.Cursor = System.Windows.Forms.Cursors.Hand;
             this.roundButton2.FlatAppearance.BorderSize = 0;
             this.roundButton2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.roundButton2.Font = new System.Drawing.Font("MS Reference Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -104,6 +109,7 @@
             // 
             this.roundButton1.BackColor = System.Drawing.Color.Beige;
             this.roundButton1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.roundButton1.Cursor = System.Windows.Forms.Cursors.Hand;
             this.roundButton1.FlatAppearance.BorderSize = 0;
             this.roundButton1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.roundButton1.Font = new System.Drawing.Font("MS Reference Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -118,17 +124,27 @@
             this.roundButton1.UseVisualStyleBackColor = false;
             this.roundButton1.Click += new System.EventHandler(this.roundButton_Click);
             // 
+            // label1
+            // 
+            label1.AutoSize = true;
+            label1.Location = new System.Drawing.Point(219, 113);
+            label1.Name = "label1";
+            label1.Size = new System.Drawing.Size(172, 15);
+            label1.TabIndex = 5;
+            label1.Text = "请选择单词中缺省的字母";
+            // 
             // MultipleChoice
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(label1);
             this.Controls.Add(this.roundButton4);
             this.Controls.Add(this.roundButton3);
             this.Controls.Add(this.roundButton2);
             this.Controls.Add(this.roundButton1);
             this.Controls.Add(this.word);
             this.Name = "MultipleChoice";
-            this.Size = new System.Drawing.Size(623, 279);
+            this.Size = new System.Drawing.Size(618, 279);
             this.ResumeLayout(false);
             this.PerformLayout();
 

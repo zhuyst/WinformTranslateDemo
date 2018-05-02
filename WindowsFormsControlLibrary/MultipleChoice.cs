@@ -18,7 +18,7 @@ namespace WindowsFormsControlLibrary
         }
 
         /// <summary>
-        /// 选项点击
+        /// 点击任一选项触发
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
