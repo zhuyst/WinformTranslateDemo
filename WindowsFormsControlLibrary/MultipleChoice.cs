@@ -7,21 +7,39 @@ namespace WindowsFormsControlLibrary
 {
     public partial class MultipleChoice : UserControl
     {
+        /// <summary>
+        /// 小写字母表
+        /// </summary>
         private static readonly char[] Letters = {
             'a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q',
             'r','s','t','u','v','w','x','y','z'
         };
 
+        /// <summary>
+        /// 目前的单词
+        /// </summary>
         public string Word { get; set; }
 
+        /// <summary>
+        /// 选项按钮数组
+        /// </summary>
         private readonly RoundButton[] _buttons;
 
         private readonly Random _random;
 
+        /// <summary>
+        /// 缺失的字母
+        /// </summary>
         private char _missLetter;
 
+        /// <summary>
+        /// 缺失的字母在原单词的位置
+        /// </summary>
         private int _missPos;
 
+        /// <summary>
+        /// 正确选项按钮在数组中的位置
+        /// </summary>
         private int _rightButtonPos;
 
         public MultipleChoice()
@@ -42,6 +60,9 @@ namespace WindowsFormsControlLibrary
             InitButtons();
         }
 
+        /// <summary>
+        /// 初始化单词
+        /// </summary>
         private void InitWord()
         {
             _missPos = _random.Next(Word.Length - 1);
@@ -49,6 +70,9 @@ namespace WindowsFormsControlLibrary
             wordLabel.Text = Word.Remove(_missPos, 1).Insert(_missPos, "_");
         }
 
+        /// <summary>
+        /// 初始化选项按钮
+        /// </summary>
         private void InitButtons()
         {
             _rightButtonPos = _random.Next(3);
@@ -56,6 +80,9 @@ namespace WindowsFormsControlLibrary
             SetButtonsText();
         }
 
+        /// <summary>
+        /// 设置选项按钮数组的字母
+        /// </summary>
         private void SetButtonsText()
         {
             var exists = new HashSet<char> {_missLetter};
