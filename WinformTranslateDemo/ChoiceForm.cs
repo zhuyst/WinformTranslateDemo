@@ -12,9 +12,13 @@ namespace WinformTranslateDemo
 {
     public partial class ChoiceForm : Form
     {
-        public ChoiceForm()
+        private readonly string _word;
+
+        public ChoiceForm(string word)
         {
             InitializeComponent();
+            _word = word;
+            multipleChoice.Word = _word;
         }
     }
 }

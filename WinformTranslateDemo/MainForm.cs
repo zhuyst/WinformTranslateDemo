@@ -126,7 +126,8 @@ namespace WinformTranslateDemo
         /// <param name="e"></param>
         private void choiceButton_Click(object sender, EventArgs e)
         {
-            var choiceForm = new ChoiceForm();
+            var word = wordListBox.SelectedItem.ToString();
+            var choiceForm = new ChoiceForm(word);
             choiceForm.ShowDialog();
         }
     }

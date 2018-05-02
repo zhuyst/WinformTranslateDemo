@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             System.Windows.Forms.Label label1;
-            this.word = new System.Windows.Forms.Label();
+            this.wordLabel = new System.Windows.Forms.Label();
             this.roundButton4 = new WindowsFormsControlLibrary.RoundButton();
             this.roundButton3 = new WindowsFormsControlLibrary.RoundButton();
             this.roundButton2 = new WindowsFormsControlLibrary.RoundButton();
@@ -46,16 +46,16 @@
             label1.TabIndex = 5;
             label1.Text = "请选择单词中缺省的字母";
             // 
-            // word
+            // wordLabel
             // 
-            this.word.AutoSize = true;
-            this.word.Font = new System.Drawing.Font("MS Reference Sans Serif", 25.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.word.ForeColor = System.Drawing.Color.OrangeRed;
-            this.word.Location = new System.Drawing.Point(237, 44);
-            this.word.Name = "word";
-            this.word.Size = new System.Drawing.Size(133, 53);
-            this.word.TabIndex = 0;
-            this.word.Text = "word";
+            this.wordLabel.AutoSize = true;
+            this.wordLabel.Font = new System.Drawing.Font("MS Reference Sans Serif", 25.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.wordLabel.ForeColor = System.Drawing.Color.OrangeRed;
+            this.wordLabel.Location = new System.Drawing.Point(237, 44);
+            this.wordLabel.Name = "wordLabel";
+            this.wordLabel.Size = new System.Drawing.Size(133, 53);
+            this.wordLabel.TabIndex = 0;
+            this.wordLabel.Text = "word";
             // 
             // roundButton4
             // 
@@ -141,9 +141,10 @@
             this.Controls.Add(this.roundButton3);
             this.Controls.Add(this.roundButton2);
             this.Controls.Add(this.roundButton1);
-            this.Controls.Add(this.word);
+            this.Controls.Add(this.wordLabel);
             this.Name = "MultipleChoice";
             this.Size = new System.Drawing.Size(618, 279);
+            this.Load += new System.EventHandler(this.MultipleChoice_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -151,7 +152,7 @@
 
         #endregion
 
-        private System.Windows.Forms.Label word;
+        private System.Windows.Forms.Label wordLabel;
         private RoundButton roundButton1;
         private RoundButton roundButton2;
         private RoundButton roundButton3;
