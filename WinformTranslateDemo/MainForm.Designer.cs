@@ -50,6 +50,7 @@
             this.meansList = new WindowsFormsControlLibrary.MyLabel();
             this.exFlowPanel = new System.Windows.Forms.FlowLayoutPanel();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.button1 = new System.Windows.Forms.Button();
             groupBox1 = new System.Windows.Forms.GroupBox();
             groupBox2 = new System.Windows.Forms.GroupBox();
             label5 = new System.Windows.Forms.Label();
@@ -175,6 +176,7 @@
             flowLayoutPanel4.Controls.Add(this.sound);
             flowLayoutPanel4.Controls.Add(this.word);
             flowLayoutPanel4.Controls.Add(this.word1);
+            flowLayoutPanel4.Controls.Add(this.button1);
             flowLayoutPanel4.Location = new System.Drawing.Point(17, 17);
             flowLayoutPanel4.Margin = new System.Windows.Forms.Padding(2);
             flowLayoutPanel4.Name = "flowLayoutPanel4";
@@ -315,6 +317,16 @@
             this.timer1.Interval = 150;
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
+            // button1
+            // 
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Location = new System.Drawing.Point(158, 3);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(95, 49);
+            this.button1.TabIndex = 9;
+            this.button1.Text = "单选题";
+            this.button1.UseVisualStyleBackColor = true;
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(120F, 120F);
@@ -323,7 +335,7 @@
             this.Controls.Add(label1);
             this.Controls.Add(groupBox2);
             this.Controls.Add(groupBox1);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.Margin = new System.Windows.Forms.Padding(2);
             this.MaximizeBox = false;
             this.Name = "MainForm";
@@ -354,5 +366,6 @@
         private System.Windows.Forms.FlowLayoutPanel exFlowPanel;
         private WindowsFormsControlLibrary.Word word1;
         private System.Windows.Forms.Timer timer1;
+        private System.Windows.Forms.Button button1;
     }
 }
