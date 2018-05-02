@@ -37,33 +37,32 @@
             this.label3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("宋体", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.label3.Location = new System.Drawing.Point(10, 185);
+            this.label3.Location = new System.Drawing.Point(12, 231);
             this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(185, 12);
+            this.label3.Size = new System.Drawing.Size(232, 15);
             this.label3.TabIndex = 5;
             this.label3.Text = "开发人员：陈恺、朱悦星、郭友达";
             // 
             // loginControl
             // 
-            this.loginControl.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.loginControl.Location = new System.Drawing.Point(12, 11);
-            this.loginControl.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.loginControl.Location = new System.Drawing.Point(12, 28);
             this.loginControl.Name = "loginControl";
-            this.loginControl.Padding = new System.Windows.Forms.Padding(8, 8, 8, 8);
+            this.loginControl.Padding = new System.Windows.Forms.Padding(10);
             this.loginControl.RightPassword = null;
             this.loginControl.RightUsername = null;
-            this.loginControl.Size = new System.Drawing.Size(367, 159);
+            this.loginControl.Size = new System.Drawing.Size(464, 183);
             this.loginControl.TabIndex = 6;
             // 
             // LoginForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(120F, 120F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
-            this.ClientSize = new System.Drawing.Size(390, 206);
+            this.ClientSize = new System.Drawing.Size(488, 258);
             this.Controls.Add(this.loginControl);
             this.Controls.Add(this.label3);
             this.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "LoginForm";
             this.Text = "登录";
             this.ResumeLayout(false);

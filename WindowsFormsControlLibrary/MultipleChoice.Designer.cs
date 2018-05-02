@@ -37,6 +37,15 @@
             label1 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
+            // label1
+            // 
+            label1.AutoSize = true;
+            label1.Location = new System.Drawing.Point(219, 113);
+            label1.Name = "label1";
+            label1.Size = new System.Drawing.Size(172, 15);
+            label1.TabIndex = 5;
+            label1.Text = "请选择单词中缺省的字母";
+            // 
             // word
             // 
             this.word.AutoSize = true;
@@ -124,19 +133,9 @@
             this.roundButton1.UseVisualStyleBackColor = false;
             this.roundButton1.Click += new System.EventHandler(this.roundButton_Click);
             // 
-            // label1
-            // 
-            label1.AutoSize = true;
-            label1.Location = new System.Drawing.Point(219, 113);
-            label1.Name = "label1";
-            label1.Size = new System.Drawing.Size(172, 15);
-            label1.TabIndex = 5;
-            label1.Text = "请选择单词中缺省的字母";
-            // 
             // MultipleChoice
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Inherit;
             this.Controls.Add(label1);
             this.Controls.Add(this.roundButton4);
             this.Controls.Add(this.roundButton3);
