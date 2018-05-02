@@ -44,12 +44,13 @@
             this.wordListBox = new System.Windows.Forms.ListBox();
             this.sound = new System.Windows.Forms.PictureBox();
             this.word = new System.Windows.Forms.Label();
-            this.word1 = new WindowsFormsControlLibrary.Word();
+            this.choiceButton = new System.Windows.Forms.Button();
             this.pho1 = new System.Windows.Forms.Label();
             this.pho2 = new System.Windows.Forms.Label();
-            this.meansList = new WindowsFormsControlLibrary.MyLabel();
             this.exFlowPanel = new System.Windows.Forms.FlowLayoutPanel();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.word1 = new WindowsFormsControlLibrary.Word();
+            this.meansList = new WindowsFormsControlLibrary.MyLabel();
             groupBox1 = new System.Windows.Forms.GroupBox();
             groupBox2 = new System.Windows.Forms.GroupBox();
             label5 = new System.Windows.Forms.Label();
@@ -172,6 +173,7 @@
             // 
             // flowLayoutPanel4
             // 
+            flowLayoutPanel4.Controls.Add(this.choiceButton);
             flowLayoutPanel4.Controls.Add(this.sound);
             flowLayoutPanel4.Controls.Add(this.word);
             flowLayoutPanel4.Controls.Add(this.word1);
@@ -186,7 +188,7 @@
             this.sound.BackColor = System.Drawing.SystemColors.Window;
             this.sound.Cursor = System.Windows.Forms.Cursors.Hand;
             this.sound.Image = global::WinformTranslateDemo.Properties.Resources.sound;
-            this.sound.Location = new System.Drawing.Point(0, 5);
+            this.sound.Location = new System.Drawing.Point(89, 5);
             this.sound.Margin = new System.Windows.Forms.Padding(0, 5, 5, 5);
             this.sound.Name = "sound";
             this.sound.Padding = new System.Windows.Forms.Padding(8);
@@ -200,7 +202,7 @@
             // 
             this.word.AutoSize = true;
             this.word.Font = new System.Drawing.Font("宋体", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.word.Location = new System.Drawing.Point(62, 5);
+            this.word.Location = new System.Drawing.Point(151, 5);
             this.word.Margin = new System.Windows.Forms.Padding(5);
             this.word.Name = "word";
             this.word.Padding = new System.Windows.Forms.Padding(8);
@@ -209,16 +211,15 @@
             this.word.Text = "单词";
             this.word.Visible = false;
             // 
-            // word1
+            // choiceButton
             // 
-            this.word1.AutoSize = true;
-            this.word1.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.word1.BackColor = System.Drawing.Color.Transparent;
-            this.word1.Location = new System.Drawing.Point(151, 4);
-            this.word1.Margin = new System.Windows.Forms.Padding(4);
-            this.word1.Name = "word1";
-            this.word1.Size = new System.Drawing.Size(0, 0);
-            this.word1.TabIndex = 8;
+            this.choiceButton.Location = new System.Drawing.Point(3, 3);
+            this.choiceButton.Name = "choiceButton";
+            this.choiceButton.Size = new System.Drawing.Size(83, 43);
+            this.choiceButton.TabIndex = 9;
+            this.choiceButton.Text = "单选题";
+            this.choiceButton.UseVisualStyleBackColor = true;
+            this.choiceButton.Click += new System.EventHandler(this.choiceButton_Click);
             // 
             // flowLayoutPanel2
             // 
@@ -251,17 +252,6 @@
             this.pho2.Size = new System.Drawing.Size(53, 31);
             this.pho2.TabIndex = 3;
             this.pho2.Text = "音标2";
-            // 
-            // meansList
-            // 
-            this.meansList.AutoSize = true;
-            this.meansList.Location = new System.Drawing.Point(20, 122);
-            this.meansList.Margin = new System.Windows.Forms.Padding(5);
-            this.meansList.Name = "meansList";
-            this.meansList.Padding = new System.Windows.Forms.Padding(8);
-            this.meansList.Size = new System.Drawing.Size(83, 31);
-            this.meansList.TabIndex = 5;
-            this.meansList.Text = "词义分析";
             // 
             // label6
             // 
@@ -315,6 +305,28 @@
             this.timer1.Interval = 150;
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
+            // word1
+            // 
+            this.word1.AutoSize = true;
+            this.word1.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.word1.BackColor = System.Drawing.Color.Transparent;
+            this.word1.Location = new System.Drawing.Point(240, 4);
+            this.word1.Margin = new System.Windows.Forms.Padding(4);
+            this.word1.Name = "word1";
+            this.word1.Size = new System.Drawing.Size(0, 0);
+            this.word1.TabIndex = 8;
+            // 
+            // meansList
+            // 
+            this.meansList.AutoSize = true;
+            this.meansList.Location = new System.Drawing.Point(20, 122);
+            this.meansList.Margin = new System.Windows.Forms.Padding(5);
+            this.meansList.Name = "meansList";
+            this.meansList.Padding = new System.Windows.Forms.Padding(8);
+            this.meansList.Size = new System.Drawing.Size(83, 31);
+            this.meansList.TabIndex = 5;
+            this.meansList.Text = "词义分析";
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(120F, 120F);
@@ -323,7 +335,7 @@
             this.Controls.Add(label1);
             this.Controls.Add(groupBox2);
             this.Controls.Add(groupBox1);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.Margin = new System.Windows.Forms.Padding(2);
             this.MaximizeBox = false;
             this.Name = "MainForm";
@@ -354,5 +366,6 @@
         private System.Windows.Forms.FlowLayoutPanel exFlowPanel;
         private WindowsFormsControlLibrary.Word word1;
         private System.Windows.Forms.Timer timer1;
+        private System.Windows.Forms.Button choiceButton;
     }
 }

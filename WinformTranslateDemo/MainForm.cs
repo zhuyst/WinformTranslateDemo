@@ -118,5 +118,16 @@ namespace WinformTranslateDemo
                 timer1.Stop();
             }
         }
+
+        /// <summary>
+        /// 单词单选题
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void choiceButton_Click(object sender, EventArgs e)
+        {
+            var choiceForm = new ChoiceForm();
+            choiceForm.ShowDialog();
+        }
     }
 }
