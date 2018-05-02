@@ -1,5 +1,4 @@
-﻿using System;
-using System.Windows.Forms;
+﻿using System.Windows.Forms;
 
 namespace WinformTranslateDemo
 {
@@ -10,7 +9,7 @@ namespace WinformTranslateDemo
             InitializeComponent();
             loginControl.RightUsername = "root";
             loginControl.RightPassword = "123456";
-            loginControl.successHandler = () =>
+            loginControl.SuccessHandlerEvent += () =>
             {
                 Hide();
                 new MainForm().Show();

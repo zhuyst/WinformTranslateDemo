@@ -15,7 +15,7 @@ namespace WindowsFormsControlLibrary
 
         public string RightPassword { get; set; }
 
-        public SuccessHandler successHandler { get; set; }
+        public SuccessHandler SuccessHandlerEvent { get; set; }
 
         public delegate void SuccessHandler();
 
@@ -23,7 +23,7 @@ namespace WindowsFormsControlLibrary
         {
             if (usernameTextBox.Text == RightUsername && passwordTextBox.Text == RightPassword)
             {
-                successHandler.Invoke();
+                SuccessHandlerEvent.Invoke();
             }
             else
             {

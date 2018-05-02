@@ -46,23 +46,20 @@
             // 
             // loginControl
             // 
-            this.loginControl.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.loginControl.Location = new System.Drawing.Point(0, 0);
-            this.loginControl.Margin = new System.Windows.Forms.Padding(0);
+            this.loginControl.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.loginControl.Location = new System.Drawing.Point(13, 13);
             this.loginControl.Name = "loginControl";
             this.loginControl.Padding = new System.Windows.Forms.Padding(10);
             this.loginControl.RightPassword = null;
             this.loginControl.RightUsername = null;
-            this.loginControl.Size = new System.Drawing.Size(488, 228);
-            this.loginControl.successHandler = null;
+            this.loginControl.Size = new System.Drawing.Size(463, 197);
+            this.loginControl.SuccessHandlerEvent = null;
             this.loginControl.TabIndex = 6;
             // 
             // LoginForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 20F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoScaleDimensions = new System.Drawing.SizeF(120F, 120F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
             this.ClientSize = new System.Drawing.Size(488, 257);
             this.Controls.Add(this.loginControl);
             this.Controls.Add(this.label3);
