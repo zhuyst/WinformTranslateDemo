@@ -51,6 +51,12 @@
     <Compile Include="ExampleSentence.Designer.cs">
       <DependentUpon>ExampleSentence.cs</DependentUpon>
     </Compile>
+    <Compile Include="GifWord.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="GifWord.Designer.cs">
+      <DependentUpon>GifWord.cs</DependentUpon>
+    </Compile>
     <Compile Include="LoginControl.cs">
       <SubType>UserControl</SubType>
     </Compile>
