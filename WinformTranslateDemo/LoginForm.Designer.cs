@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.label3 = new System.Windows.Forms.Label();
+            this.loginControl = new WindowsFormsControlLibrary.LoginControl();
             this.SuspendLayout();
             // 
             // label3
@@ -36,18 +37,34 @@
             this.label3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("宋体", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.label3.Location = new System.Drawing.Point(12, 278);
+            this.label3.Location = new System.Drawing.Point(12, 231);
             this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(232, 15);
             this.label3.TabIndex = 5;
             this.label3.Text = "开发人员：陈恺、朱悦星、郭友达";
             // 
+            // loginControl
+            // 
+            this.loginControl.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.loginControl.Location = new System.Drawing.Point(0, 0);
+            this.loginControl.Margin = new System.Windows.Forms.Padding(0);
+            this.loginControl.Name = "loginControl";
+            this.loginControl.Padding = new System.Windows.Forms.Padding(10);
+            this.loginControl.RightPassword = null;
+            this.loginControl.RightUsername = null;
+            this.loginControl.Size = new System.Drawing.Size(488, 228);
+            this.loginControl.successHandler = null;
+            this.loginControl.TabIndex = 6;
+            // 
             // LoginForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(120F, 120F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
-            this.ClientSize = new System.Drawing.Size(488, 304);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 20F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.ClientSize = new System.Drawing.Size(488, 257);
+            this.Controls.Add(this.loginControl);
             this.Controls.Add(this.label3);
             this.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.Margin = new System.Windows.Forms.Padding(4);
@@ -60,6 +77,7 @@
 
         #endregion
         private System.Windows.Forms.Label label3;
+        private WindowsFormsControlLibrary.LoginControl loginControl;
     }
 }
 

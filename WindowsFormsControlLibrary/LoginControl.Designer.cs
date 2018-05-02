@@ -39,10 +39,11 @@
             // 
             // label2
             // 
-            label2.Anchor = System.Windows.Forms.AnchorStyles.None;
+            label2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             label2.AutoSize = true;
             label2.Font = new System.Drawing.Font("宋体", 12F);
-            label2.Location = new System.Drawing.Point(19, 79);
+            label2.Location = new System.Drawing.Point(15, 77);
             label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             label2.Name = "label2";
             label2.Size = new System.Drawing.Size(49, 20);
@@ -51,10 +52,11 @@
             // 
             // label1
             // 
-            label1.Anchor = System.Windows.Forms.AnchorStyles.None;
+            label1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             label1.AutoSize = true;
             label1.Font = new System.Drawing.Font("宋体", 12F);
-            label1.Location = new System.Drawing.Point(19, 23);
+            label1.Location = new System.Drawing.Point(15, 21);
             label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             label1.Name = "label1";
             label1.Size = new System.Drawing.Size(69, 20);
@@ -63,30 +65,27 @@
             // 
             // passwordTextBox
             // 
-            this.passwordTextBox.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.passwordTextBox.Font = new System.Drawing.Font("宋体", 12F);
-            this.passwordTextBox.Location = new System.Drawing.Point(129, 76);
+            this.passwordTextBox.Location = new System.Drawing.Point(125, 74);
             this.passwordTextBox.Margin = new System.Windows.Forms.Padding(2);
             this.passwordTextBox.Name = "passwordTextBox";
             this.passwordTextBox.PasswordChar = '*';
-            this.passwordTextBox.Size = new System.Drawing.Size(238, 30);
+            this.passwordTextBox.Size = new System.Drawing.Size(218, 30);
             this.passwordTextBox.TabIndex = 7;
             // 
             // usernameTextBox
             // 
-            this.usernameTextBox.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.usernameTextBox.Font = new System.Drawing.Font("宋体", 12F);
-            this.usernameTextBox.Location = new System.Drawing.Point(129, 20);
+            this.usernameTextBox.Location = new System.Drawing.Point(125, 18);
             this.usernameTextBox.Margin = new System.Windows.Forms.Padding(2);
             this.usernameTextBox.Name = "usernameTextBox";
-            this.usernameTextBox.Size = new System.Drawing.Size(238, 30);
+            this.usernameTextBox.Size = new System.Drawing.Size(218, 30);
             this.usernameTextBox.TabIndex = 5;
             // 
             // loginButton
             // 
-            this.loginButton.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.loginButton.Font = new System.Drawing.Font("宋体", 12F);
-            this.loginButton.Location = new System.Drawing.Point(276, 136);
+            this.loginButton.Location = new System.Drawing.Point(252, 118);
             this.loginButton.Margin = new System.Windows.Forms.Padding(2);
             this.loginButton.Name = "loginButton";
             this.loginButton.Size = new System.Drawing.Size(91, 39);
@@ -105,7 +104,8 @@
             this.Controls.Add(this.usernameTextBox);
             this.Controls.Add(label1);
             this.Name = "LoginControl";
-            this.Size = new System.Drawing.Size(389, 193);
+            this.Padding = new System.Windows.Forms.Padding(10);
+            this.Size = new System.Drawing.Size(361, 169);
             this.ResumeLayout(false);
             this.PerformLayout();
 

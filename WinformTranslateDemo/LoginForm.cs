@@ -8,6 +8,13 @@ namespace WinformTranslateDemo
         public LoginForm()
         {
             InitializeComponent();
+            loginControl.RightUsername = "root";
+            loginControl.RightPassword = "123456";
+            loginControl.successHandler = () =>
+            {
+                Hide();
+                new MainForm().Show();
+            };
         }
     }
 }

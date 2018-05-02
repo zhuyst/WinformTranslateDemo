@@ -6,6 +6,11 @@ namespace WindowsFormsControlLibrary
     public partial class LoginControl : UserControl
     {
 
+        public LoginControl()
+        {
+            InitializeComponent();
+        }
+
         public string RightUsername { get; set; }
 
         public string RightPassword { get; set; }
@@ -18,7 +23,6 @@ namespace WindowsFormsControlLibrary
         {
             if (usernameTextBox.Text == RightUsername && passwordTextBox.Text == RightPassword)
             {
-                Hide();
                 successHandler.Invoke();
             }
             else
