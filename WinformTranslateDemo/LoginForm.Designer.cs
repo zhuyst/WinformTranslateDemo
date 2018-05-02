@@ -53,7 +53,6 @@
             this.loginControl.RightPassword = null;
             this.loginControl.RightUsername = null;
             this.loginControl.Size = new System.Drawing.Size(463, 197);
-            this.loginControl.SuccessHandlerEvent = null;
             this.loginControl.TabIndex = 6;
             // 
             // LoginForm
