@@ -1,12 +1,16 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Diagnostics;
 using System.Windows.Forms;
 
 namespace WindowsFormsControlLibrary
 {
     public partial class MultipleChoice : UserControl
     {
+        /// <summary>
+        /// 关闭窗口事件
+        /// </summary>
+        public event EventHandler CloseEvent;
+
         /// <summary>
         /// 小写字母表
         /// </summary>
@@ -18,7 +22,7 @@ namespace WindowsFormsControlLibrary
         /// <summary>
         /// 目前的单词
         /// </summary>
-        public string Word { get; set; }
+        public string Word { get; set; } = "Word";
 
         /// <summary>
         /// 选项按钮数组
@@ -68,6 +72,8 @@ namespace WindowsFormsControlLibrary
             _missPos = _random.Next(Word.Length - 1);
             _missLetter = Word[_missPos];
             wordLabel.Text = Word.Remove(_missPos, 1).Insert(_missPos, "_");
+            //单词居中
+            wordLabel.Left = (ClientSize.Width - wordLabel.Width) / 2;
         }
 
         /// <summary>
@@ -76,7 +82,7 @@ namespace WindowsFormsControlLibrary
         private void InitButtons()
         {
             _rightButtonPos = _random.Next(3);
-            _buttons[_rightButtonPos].Text = _missLetter + "";
+            _buttons[_rightButtonPos].Text = _missLetter.ToString();
             SetButtonsText();
         }
 
@@ -85,16 +91,16 @@ namespace WindowsFormsControlLibrary
         /// </summary>
         private void SetButtonsText()
         {
-            var exists = new HashSet<char> {_missLetter};
-            for(var i = 0;i < _buttons.Length;i++)
+            var exists = new HashSet<char> { _missLetter };
+            for (var i = 0; i < _buttons.Length; i++)
             {
-                if(i == _rightButtonPos) continue;
+                if (i == _rightButtonPos) continue;
                 while (true)
                 {
                     var letter = Letters[_random.Next(Letters.Length - 1)];
                     if (exists.Contains(letter)) continue;
 
-                    _buttons[i].Text = letter + "";
+                    _buttons[i].Text = letter.ToString();
                     exists.Add(letter);
                     break;
                 }
@@ -108,10 +114,15 @@ namespace WindowsFormsControlLibrary
         /// <param name="e"></param>
         private void roundButton_Click(object sender, EventArgs e)
         {
-            var circle = (RoundButton) sender;
-            if (circle.Text == _missLetter + "")
+            var circle = (RoundButton)sender;
+            if (circle.Text == _missLetter.ToString())
             {
-
+                MessageBox.Show("答案正确!", string.Empty, MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
+                CloseEvent?.Invoke(sender, e);
+            }
+            else
+            {
+                MessageBox.Show("答案错误!", string.Empty, MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
     }

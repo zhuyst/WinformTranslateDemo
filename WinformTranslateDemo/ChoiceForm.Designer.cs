@@ -33,11 +33,11 @@
             // 
             // multipleChoice
             // 
-            this.multipleChoice.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.multipleChoice.Location = new System.Drawing.Point(13, 13);
+            this.multipleChoice.Location = new System.Drawing.Point(12, 12);
             this.multipleChoice.Name = "multipleChoice";
-            this.multipleChoice.Size = new System.Drawing.Size(618, 279);
+            this.multipleChoice.Size = new System.Drawing.Size(621, 281);
             this.multipleChoice.TabIndex = 0;
+            this.multipleChoice.Word = "Word";
             // 
             // ChoiceForm
             // 
@@ -47,7 +47,6 @@
             this.Controls.Add(this.multipleChoice);
             this.Name = "ChoiceForm";
             this.ResumeLayout(false);
-
         }
 
         #endregion
