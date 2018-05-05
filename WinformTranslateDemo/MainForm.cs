@@ -44,7 +44,8 @@ namespace WinformTranslateDemo
             _result = _translate.EnToZh(text);
             word.Text = text;
             word1.AddLabel(text);
-
+            gifWord1.Word = text;
+            gifWord1.Refresh();
             pho1.Text = $"美 [{_result.Pronunciation.AmE}]";
             pho2.Text = $"英 [{_result.Pronunciation.BrE}]";
             meansList.Clear();
