@@ -33,14 +33,14 @@ namespace WindowsFormsControlLibrary
 
         private void loginButton_Click(object sender, EventArgs e)
         {
-            //if (usernameTextBox.Text == RightUsername && passwordTextBox.Text == RightPassword)
-            //{
-                SuccessHandlerEvent?.Invoke();
-            //}
-            //else
-            //{
-            //    MessageBox.Show("用户名或密码错误！", "错误", MessageBoxButtons.OK);
-            //}
+            if (usernameTextBox.Text == RightUsername && passwordTextBox.Text == RightPassword)
+            {
+                 SuccessHandlerEvent?.Invoke();
+            }
+                else
+            {
+            MessageBox.Show("用户名或密码错误！", "错误", MessageBoxButtons.OK);
+            }
         }
     }
 }
