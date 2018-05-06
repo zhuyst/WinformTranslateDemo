@@ -17,11 +17,6 @@
   </Comment>
   <Class Name="WinformTranslateDemo.LoginForm" Collapsed="true">
     <Position X="0.75" Y="1.75" Width="1.5" />
-    <Members>
-      <Field Name="components" Hidden="true" />
-      <Method Name="Dispose" Hidden="true" />
-      <Method Name="InitializeComponent" Hidden="true" />
-    </Members>
     <TypeIdentifier>
       <HashCode>AAAAAAAAACAAABAAAACAAAACAAAAAAAAAABAAAAAAAA=</HashCode>
       <FileName>LoginForm.cs</FileName>
@@ -29,47 +24,25 @@
   </Class>
   <Class Name="WindowsFormsControlLibrary.LoginControl" Collapsed="true">
     <Position X="3" Y="1.75" Width="1.5" />
-    <Members>
-      <Method Name="Dispose" Hidden="true" />
-    </Members>
-    <NestedTypes>
-      <Delegate Name="WindowsFormsControlLibrary.LoginControl.SuccessHandler" Collapsed="true">
-        <TypeIdentifier />
-      </Delegate>
-    </NestedTypes>
     <TypeIdentifier />
   </Class>
   <Class Name="WinformTranslateDemo.MainForm" Collapsed="true">
     <Position X="0.75" Y="3" Width="1.5" />
-    <Members>
-      <Field Name="components" Hidden="true" />
-      <Method Name="Dispose" Hidden="true" />
-      <Method Name="InitializeComponent" Hidden="true" />
-    </Members>
     <TypeIdentifier>
-      <HashCode>AAQAECCBEDAAAAADAACAEAgCAAAEIAAgAAAAUACAAAA=</HashCode>
+      <HashCode>AAQAMCCBMDAAAAADAACAEAgCAAAEIAAgAAAIUACAAAA=</HashCode>
       <FileName>MainForm.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="WindowsFormsControlLibrary.MyLabel" Collapsed="true">
     <Position X="3" Y="3" Width="1.5" />
-    <Members>
-      <Method Name="Dispose" Hidden="true" />
-    </Members>
     <TypeIdentifier />
   </Class>
   <Class Name="WindowsFormsControlLibrary.Word" Collapsed="true">
     <Position X="3" Y="4.5" Width="1.5" />
-    <Members>
-      <Method Name="Dispose" Hidden="true" />
-    </Members>
     <TypeIdentifier />
   </Class>
   <Class Name="WindowsFormsControlLibrary.ExampleSentence" Collapsed="true">
     <Position X="3" Y="3.75" Width="1.5" />
-    <Members>
-      <Method Name="Dispose" Hidden="true" />
-    </Members>
     <TypeIdentifier />
   </Class>
   <Class Name="Words.Words" Collapsed="true">
@@ -82,6 +55,25 @@
   </Class>
   <Class Name="Bing.TranslateResult" Collapsed="true">
     <Position X="5.25" Y="3.75" Width="1.5" />
+    <TypeIdentifier />
+  </Class>
+  <Class Name="WinformTranslateDemo.ChoiceForm" Collapsed="true">
+    <Position X="0.75" Y="6.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAACAAAAAAAACAAAACAAAAAAAAAAIAAAAAAAA=</HashCode>
+      <FileName>ChoiceForm.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="WindowsFormsControlLibrary.MultipleChoice" Collapsed="true">
+    <Position X="3" Y="6.5" Width="1.5" />
+    <TypeIdentifier />
+  </Class>
+  <Class Name="WindowsFormsControlLibrary.GifWord" Collapsed="true">
+    <Position X="3" Y="5.25" Width="1.5" />
+    <TypeIdentifier />
+  </Class>
+  <Class Name="WindowsFormsControlLibrary.RoundButton" Collapsed="true">
+    <Position X="3" Y="7.25" Width="1.5" />
     <TypeIdentifier />
   </Class>
   <Font Name="Microsoft YaHei UI" Size="9" />
