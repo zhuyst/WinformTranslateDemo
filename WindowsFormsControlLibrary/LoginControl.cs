@@ -24,12 +24,7 @@ namespace WindowsFormsControlLibrary
         /// <summary>
         /// 正确时执行的方法
         /// </summary>
-        public event SuccessHandler SuccessHandlerEvent;
-
-        /// <summary>
-        /// 定义正确时执行的方法（委托）
-        /// </summary>
-        public delegate void SuccessHandler();
+        public event Action SuccessHandlerEvent;
 
         private void loginButton_Click(object sender, EventArgs e)
         {
