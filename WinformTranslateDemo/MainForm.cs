@@ -27,6 +27,7 @@ namespace WinformTranslateDemo
                 wordListBox.Items.Add(item);
             }
             wordListBox.EndUpdate();
+            gifWord1.Frames = -1;
             _translate = new TranslateApi();
             wordListBox.SelectedIndex = 0;
         }
@@ -38,6 +39,7 @@ namespace WinformTranslateDemo
         /// <param name="e"></param>
         private void wordListBox_SelectedIndexChanged(object sender, EventArgs e)
         {
+            timer2.Stop();
             timer1.Stop();
             _flag = 0;
             var text = wordListBox.SelectedItem.ToString();
@@ -45,6 +47,7 @@ namespace WinformTranslateDemo
             word.Text = text;
             word1.AddLabel(text);
             gifWord1.Word = text;
+            gifWord1.Frames = -1;
             gifWord1.Refresh();
             pho1.Text = $"美 [{_result.Pronunciation.AmE}]";
             pho2.Text = $"英 [{_result.Pronunciation.BrE}]";
@@ -61,6 +64,7 @@ namespace WinformTranslateDemo
             }
             ExAutoSize();
             timer1.Start();
+            timer2.Start();
         }
 
         /// <summary>
@@ -129,6 +133,16 @@ namespace WinformTranslateDemo
         {
             var currentWord = wordListBox.SelectedItem.ToString();
             new ChoiceForm(currentWord).ShowDialog();
+        }
+
+        private void timer2_Tick(object sender, EventArgs e)
+        {
+            if(++gifWord1.Frames > word.Text.Length)
+            {
+                gifWord1.Frames = -1;
+                timer2.Stop();
+            }
+            gifWord1.Refresh();
         }
     }
 }
